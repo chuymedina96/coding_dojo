@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog</title>
+        <style>
+            .container{
+                text-align: left;
+            }
+            .second-container{
+                width: 100%;
+            }
+            .second-container p{
+                width:40%;
+                
+            }
+            table{
+                border: 3px solid green;
+            }
+            th{
+                border-right: 2px solid green;
+                text-align: center;
+            }
+            td{
+                text-align: center;
+                border-right: 2px solid green;
+                padding: 5px;
+            }
+            .button{
+                padding:5px;
+                background-color:khaki;
+                border: solid 2px chocolate;
+            }
+            .button:hover{
+                background-color:coral;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+<body>
+    <div class="container">
+        <h1>Chuy Medina</h1>
+        <img src="img/git-pic.jpg" alt="pic-of-me">
+
+        <div class="second-container">
+            <p>Self-taught Developer with over 2 years of experience developing for the web. Highly motivated, tech savvy individual with a lot of ideas in mind. Passion for continous learning of new web application frameworks and programming languages. Developing for the web is a passion of mine that sprung up when I began to wonder how the internet and building websites actually worked. Curiosity led me to the world of coding and I began teaching myself how to code by utilizing online resources to the fullest. I am continuously learning new web technologies, as it is a must-do for any kind of developer in the tech industry.</p>
+        </div>
+        <table>
+            <thead>
+                <h3>Work Experience</h3>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <th>Job Title</th>
+                    <th>Company</th>
+                    <th>Duration(months)</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Jr DevOps Support</td>
+                    <td>Dom and Tom, INC</td>
+                    <td>8</td>
+                    <td>Docker, NGINX, Circle CI</td>
+                </tr>
+                <tr>
+                    <td>Web Dev Intern</td>
+                    <td>Dom and Tom, INC</td>
+                    <td>6</td>
+                    <td>Exposed to Node.js</td>
+                </tr>
+                <tr>
+                    <td>Contract Web Dev</td>
+                    <td>Smart Chicago</td>
+                    <td>4</td>
+                    <td>html,css,js, wordpress</td>
+                </tr>
+            </tbody>
+            
+
+        </table>
+        <h3>Technologies:</h3>
+        <ul>
+            <li>Javascript</li>
+            <li>HTML5/CSS3</li>
+            <li>Apache/NGINX</li>
+            <li>Circel CI</li>
+            <li>Python</li>
+            <li>NodeJS</li>
+            <li>AWS</li>
+        </ul>
+        <a href="http://chuymedina.net" target="_blank"><h2>Visit my portfolio!</h2></a>
+        <h2>Please take this short survey</h2>
+        <form action="POST">
+            Email:<input type="text"></input>
+        </form><br>
+        <input type="radio" name="yes" id="">Yes, please send me lots of emails</input>
+        <input type="radio" name="no" id="">No, please do not send me emails</input><br>
+        <h3>How did you hear about us?</h3>
+        <input type="checkbox" name="facebook">Facebook</input><br>
+        <input type="checkbox" name="twitter">Twitter</input><br>
+        <input type="checkbox" name="newspaper">Newspaper</input><br>
+        <input type="checkbox" name="referral">Referral</input><br><br>
+        <button class="button" type="submit">Submit</button>
+    </div>
+</body>
+</html>
