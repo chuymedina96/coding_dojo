@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=UTF-8>
+        <title>Register!</title>
+        <style>
+            body{
+                display: inline-block;
+                padding:-5px;
+            }
+            form{
+                display: inline;
+            }
+            .text-box{
+                width: 300px;
+            }
+            .button{
+                padding:10px;
+                background-color:indianred;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                border: dotted 2px green;
+                font-size: 20px;
+                font-style: italic;
+
+            }
+            .button:hover{
+                background-color:aquamarine;
+                border: solid 2px green;
+                cursor: pointer;
+            }
+            </style>
+    </head>
+<body>
+    <h2>My Registration Form</h2>
+    
+    <form action="POST">
+        <h4>First Name:</h4>
+            <input type="text"></input>
+        <h4>Last Name:</h4>
+            <input type="text" name="first-name" id=""></input>
+        <h4>Email</h4>
+            <input type="text" name="last-name" id=""></input>
+        <h4>Password</h4>
+            <input type="password" name="password" id=""></input>
+        <h4>PW Confirm</h4>
+            <input type="password" name="pw-confirm" id=""></input>
+        <h4>Birthday</h4>
+            <input type="date"></input><br><br>
+            
+            <input type="radio" value="">Male</input>       
+            <input type="radio" value="">Female</input> 
+            <input type="radio">Other</input>
+            <h3>A short description about yourself:</h3>
+            <textarea class="text-box" name="comment" form="usrform" value="enter here">Enter text here...</textarea>
+            <h3>Favorite Language:</h3>
+            <select name="" id="">
+                <option value="Javascript">Javascript</option>
+                <option value="pythont">Python</option>
+                <option value="ruby">Ruby</option>
+                <option value="go">Go</option>
+                <option value="Java">Java</option>
+                <option value="bash">Bash</option>
+                <option value="c#">C#</option>
+                <option value="kotlin">Kotlin</option>
+                <option value="php">PHP</option>
+            </select><br><br>
+            <button class="button">Submit</button>
+       
+    </form>
+</body>
+</html>
