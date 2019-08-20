@@ -1,0 +1,33 @@
+#container{
+    background-color: yellow;
+    display: inline-block;
+    height: 2000px;
+    width: 2000px;
+    
+  }
+  #box-1, #box-2, #box-3{
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    display: inline-block;
+  }
+  #box-1{
+    background-color: green;
+    position: fixed;
+    top:40px;
+    /*position: absolute;
+    top: 40px;*/
+  }
+  #box-2{
+    background-color: pink;
+
+    /*position: relative; /* position makes element stay within docment flow.
+    top: 20px;
+    left: 20px;*/
+    
+
+  }
+  #box-3{
+    background-color: blue;
+  }
+  
