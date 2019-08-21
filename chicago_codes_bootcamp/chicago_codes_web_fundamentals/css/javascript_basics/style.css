@@ -19,6 +19,9 @@ body{
     margin-top: 15px;
     
 }
+.navigation a{
+    color: #9ae9fc;
+}
 .navigation h4{
     margin:30px;
     padding-top:10px;
@@ -39,12 +42,27 @@ body{
 .main-content h2{
     margin: 30px 20px;
 }
+.main-content a{
+    color: #9ae9fc;
+}
+.main-content h2{
+    padding-top:20px;
+}
+.main-content h5{
+    margin-left: 20px;
+    font-size: 16px;
+}
 .span-colors{
-    color: blue;
+    color: #5591f2;
 }
 .footer{
     height:50px;
     width: 100%;
     background-color: #63626e;
     border-radius: 20px;
+    color: white;
+}
+.footer h5{
+    padding-left: 15px;
+    padding-top: 15px;
 }
