@@ -1,0 +1,35 @@
+body{
+    background-color: #6e4845;
+}
+
+header{
+    display: inline-block;
+    background-color: #d8e6db;
+    width: 100%;   
+}
+.alignleft {
+    float: left;
+    margin-left: 10px;
+    font-size: 30px;
+}
+
+.alignright {
+    float: right;
+    margin-right: 10px;
+    font-size: 30px;
+}
+.main-content img{
+    width: 400px;
+    height: 300px;
+    margin-top: 15px;
+    border: 5px solid #d8e6db;
+    margin-left: 15px;
+}
+.about-div{
+    background-color: white;
+    width: 500px;
+    height: 300px;
+}
+.about-div h2{
+    background-color: #d8e6db;
+}
