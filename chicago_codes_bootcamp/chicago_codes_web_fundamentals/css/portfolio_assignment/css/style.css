@@ -33,3 +33,64 @@ header{
 .about-div h2{
     background-color: #d8e6db;
 }
+.column-sections{
+    min-height: 400px;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    margin-top: 15px;
+    
+}
+.row-1{ 
+    min-height: 700px;
+    width: 300px;
+    background-color: #d8e6db;
+    display: inline-block;
+    margin: 10px;
+    vertical-align: top;
+}
+.row-1 img{
+    height: 180px;
+    width: 300px;
+}
+p.section-titles{
+    background-color: blue;
+    height: 50px;
+    margin-top:0;
+    vertical-align: bottom;
+    
+}
+.tech-pics img{
+    height: 40px;
+    width: 40px;
+    margin-right: 5px;
+    
+}
+.tech-list li{
+    list-style: none;
+    display: inline;
+    text-align: center;
+}
+.button{
+    padding: 10px;
+    background-color: #28660f;
+    border-radius: 50px;
+    color: white;
+    
+}
+.button:hover{
+    cursor: pointer;
+}
+.footer-stuff{
+    text-align: center;
+    background-color: #d8e6db;
+    height: 80px;
+}
+.footer-stuff li{
+    list-style: none;
+    display: inline;
+}
+.footer-stuff img{
+    height: 20px;
+    width: 20px;
+}
