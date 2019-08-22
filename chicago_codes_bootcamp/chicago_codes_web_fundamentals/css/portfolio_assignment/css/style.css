@@ -1,3 +1,6 @@
+*{
+    vertical-align: top;
+}
 body{
     background-color: #6e4845;
 }
@@ -29,6 +32,7 @@ header{
     background-color: white;
     width: 500px;
     height: 300px;
+    
 }
 .about-div h2{
     background-color: #d8e6db;
@@ -43,7 +47,7 @@ header{
 }
 .row-1{ 
     min-height: 700px;
-    width: 300px;
+    width: 350px;
     background-color: #d8e6db;
     display: inline-block;
     margin: 10px;
@@ -84,13 +88,24 @@ p.section-titles{
 .footer-stuff{
     text-align: center;
     background-color: #d8e6db;
-    height: 80px;
+    height: 100px;
+}
+.footer-stuff p{
+    padding-top:16px;
+}
+.footer-stuff a{
+    text-decoration:  underline;
+    color: black;
+    font-style: italic;
+    font-size: 20px;
+
 }
 .footer-stuff li{
     list-style: none;
     display: inline;
 }
 .footer-stuff img{
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
+    margin-right:5px;
 }
