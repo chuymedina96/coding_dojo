@@ -2,7 +2,7 @@
     vertical-align: top;
 }
 body{
-    background-color: #6e4845;
+    background-image: radial-gradient(#8a5955, #a16b67, #261a19);
 }
 
 header{
@@ -48,6 +48,9 @@ header{
 .about-div p{
     font-size: 21px;
     padding-left: 10px;
+}
+.about-div a{
+    color: black;
 }
 .about-div h2{
     background: linear-gradient(#c2ccc2, #929c92, #c2ccc2);
@@ -124,7 +127,7 @@ p.section-titles{
 }
 .button{
     padding: 10px;
-    background-color: #28660f;
+    background-color: #085415;
     border-radius: 50px;
     color: white;
     font-weight: 800;
