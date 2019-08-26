@@ -45,6 +45,7 @@ div.text-size-header{
 }
 .search-box input{
     display: inline-block;
+    width: 150px;
     height: 30px;
     margin-left: 50px;
     margin-top: 15px;
@@ -53,7 +54,7 @@ div.text-size-header{
 }
 .search-box button{
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 18px;
     background-color: #164694;
     padding: 3px 8px;
     color: white;
@@ -76,7 +77,7 @@ div.text-size-header{
     margin: 0 auto;
     height: 60px;
     color: white;
-    font-size: 25px;
+    font-size: 22px;
     
 }
 .navigation ul li{
