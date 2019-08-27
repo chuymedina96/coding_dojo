@@ -4,11 +4,10 @@
 body{
     background-image: radial-gradient(#8a5955, #a16b67, #261a19);
 }
-
 header{
     display: inline-block;
     background-color: #d8e6db;
-    width: 100%;   
+    width: 100%;
 }
 .alignleft {
     float: left;
@@ -34,7 +33,7 @@ header{
     height: 390px;
     margin-top: 15px;
     border: 5px solid #d8e6db;
-    
+
 }
 .about-div{
     background: linear-gradient(0.25turn, #ebf0ec, #ebf8e1, #b9c4bb);
@@ -43,7 +42,7 @@ header{
     display: inline-block;
     vertical-align: bottom;
     text-align: left;
-    
+
 }
 .about-div p{
     font-size: 21px;
@@ -67,9 +66,9 @@ header{
     display: inline-block;
     text-align: center;
     margin-top: 15px;
-    
+
 }
-.row-1{ 
+.row-1{
     min-height: 700px;
     width: 350px;
     background-color: #d8e6db;
@@ -98,7 +97,7 @@ p.column-title{
     padding:0 10px;
 }
 .tech-pics img{
-    height: 40px; 
+    height: 40px;
     width: 40px;
     margin-right: 5px;
 }
@@ -108,7 +107,7 @@ p.column-title{
 .tech-list li{
     display: inline-block;
     padding-bottom:13px;
-    
+
 }
 p.section-titles{
     background: linear-gradient(#c2ccc2, #929c92, #c2ccc2);
