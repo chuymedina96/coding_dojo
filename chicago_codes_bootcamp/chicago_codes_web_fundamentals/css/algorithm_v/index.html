@@ -40,10 +40,7 @@ moveForward([1,2,3]);
 //3. Given an array, return an array with values in a reversed order.  For example, returnReversed([1,2,3]) should return [3,2,1].
 
 function returnReversed(arr){
-
-    for(var i = 0; i < arr.length;i++){
-        arr[i] = arr[i + 1];
-    }
+    arr.reverse();
     return arr;
 }
 returnReversed([1,2,3]);
