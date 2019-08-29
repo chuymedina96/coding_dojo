@@ -1,0 +1,29 @@
+#container{
+    width: 680px;
+    background-color: beige;
+    border: 1px solid black;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+
+}
+img{
+    width: 100px;
+}
+
+#title-bar h1{
+    display: inline-block;
+}
+
+.blue{
+    background-color: cornflowerblue;
+    border: 2px solid black;
+    margin: 2px;
+    padding: 10px;
+}
+.red{
+    background-color: indianred;
+    border: 2px solid black;
+    margin: 2px;
+    padding: 10px;
+}
