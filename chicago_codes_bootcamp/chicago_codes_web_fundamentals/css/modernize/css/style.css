@@ -1,6 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
 * {
     vertical-align: top;
+    
+}
+body{
+    background-color: black;
 }
 header{
     border: 1px solid black;
@@ -20,7 +23,7 @@ header h5{
     margin-left: 1130px;
     margin-top: -50px;
 }
-div.nav{
+.nav{
     height: 60px;
     background-color: #3F3F3F;
     color: white;
@@ -36,6 +39,11 @@ div.nav{
     padding-bottom: 5px;
     padding-left: 20px;
 }
+.nav ul li.nav-border-left:after {
+    content: "\00BB \0020";
+    color: white;
+    margin-left: 8px;
+}
 .nav a{
     text-decoration: none;
     color: white;
@@ -43,11 +51,18 @@ div.nav{
 .nav a:hover{
     color: #948b7e;
 }
+#contact-border{
+    border-right: 2px solid grey;
+    padding-right: 430px;
+}
 .nav-border-left{
     padding-left: 2px;
     border-right: 2px solid grey;
 }
-div.main-body{
+.chevron{
+    font-size: 12px;
+}
+.main-body{
     height: 500px;
     border: 2px solid black;
     background-image: url('../img/main_pic.png');
@@ -65,9 +80,21 @@ div.main-body{
     color: white;
     width: 23%;
     margin-left: 20px;
+    margin-top: 40px;
+}
+.row img{
+    display: inline-block;
+    margin-top:15px;
+    height: 50px;
+    width: 50px;
 }
 .titles{
     color: orange;
+}
+.content-item{
+    display: inline-block;
+    vertical-align: top;
+    width: 250px;
 }
 .sell-div{
     margin-top: 0;
@@ -77,21 +104,46 @@ div.main-body{
 }
 .sell-div h1, .sell-div p{
     display: inline-block;
-    width: 80%;
+    width: 75%;
+    padding-left: 40px;
+}
+.sell-div h1{
+    padding-top: 30px;
 }
 .button-style{
     display: inline-block;
-    padding: 10px;
+    padding: 15px 30px;
     font-size: 20px;
     background-color: #db8400;
     color: white;
     font-weight: 400;
     border-radius: 5px;
     border: none;
+    margin-top: -50px;
+    margin-left: 90px;
+}
+.button-style a{
+    color: white;
+    text-decoration: none;
 }
 #second-row{
     color: white;
-    height: 500px;
+    height: 550px;
+}
+#second-row a{
+    text-decoration: none;
+    color:#db8400;
+}
+.portfolio-title{
+    display: inline-block;
+    margin-left: 20px;
+    padding-top: 20px;
+}
+.all-projects{
+    display: inline-block;
+    margin-left: 970px;
+    color: #db8400;
+    padding-top: 20px;
 }
 #second-row img{
     border: 5px solid grey;
@@ -101,4 +153,7 @@ div.main-body{
 #second-row .p-right{
     float: right;
     margin-right: 20px;
+}
+#second-row a.back-to-top{
+    color: white;
 }
