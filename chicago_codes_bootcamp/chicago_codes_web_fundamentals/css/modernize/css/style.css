@@ -1,28 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
 * {
     vertical-align: top;
-    
 }
 header{
     border: 1px solid black;
     margin: 0 auto;
     color: white;
-    background-color: #161c18;
+    background-color: #1A1A1A;
     height: 130px;
 }
-h1.logo{
-    font-family: 'Pacifico', cursive;
-    font-size: 35px;
+header img{
+    margin-top: 20px;
+    margin-left: 20px;
 }
-header h1, header h5{
+header h5{
     display: inline-block;
 }
 header h5{
-    margin-left: 960px;
+    margin-left: 1130px;
+    margin-top: -50px;
 }
 div.nav{
-    height: 65px;
-    background-color: #2e3d32;
+    height: 60px;
+    background-color: #3F3F3F;
     color: white;
 }
 .nav ul{
@@ -32,8 +32,16 @@ div.nav{
     display: inline-block;
     font-size: 18px;
     padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+}
+.nav a{
+    text-decoration: none;
+    color: white;
+}
+.nav a:hover{
+    color: #948b7e;
 }
 .nav-border-left{
     padding-left: 2px;
@@ -49,11 +57,8 @@ div.main-body{
 }
 .row{
     height: 300px;
-    background-color: black;
+    background-color:#1A1A1A;
     margin: 0 auto;
-}
-.row img{
-    display: inline;
 }
 .item{
     display: inline-block;
@@ -67,5 +72,33 @@ div.main-body{
 .sell-div{
     margin-top: 0;
     height: 250px;
-    background-color: black;
+    background-color: #0A0A0A;
+    color: white;
+}
+.sell-div h1, .sell-div p{
+    display: inline-block;
+    width: 80%;
+}
+.button-style{
+    display: inline-block;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #db8400;
+    color: white;
+    font-weight: 400;
+    border-radius: 5px;
+    border: none;
+}
+#second-row{
+    color: white;
+    height: 500px;
+}
+#second-row img{
+    border: 5px solid grey;
+    height: 200px;
+    width: 290px;
+}
+#second-row .p-right{
+    float: right;
+    margin-right: 20px;
 }
