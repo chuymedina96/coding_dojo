@@ -1,0 +1,19 @@
+pip list
+    -- lists the current instaled python packages within the given system.
+call myEnvironments/py3Env/Scripts/activate
+    -- This command calls on the activate script within the virtual enviroment and executes the script, thus activating the virtual enviroment.
+pip install Django==1.11.9
+    -- This command installs the given package 'Django' with a specfic version of the package to be installed.
+pip freeze
+    -- This command is very similar to the 'pip list' command listed above with the only difference being is that is displays the same information in a manner that can be easily copied in case another developer needs to install that package version.
+cd ~/Desktop
+    -- This command is changing directory to be your Desktop. cd also stand for chnage directory.
+pip uninstall Django
+    -- This command uninstalls packages. In this case, pip will remove or uninstall Django.
+pip show Django
+    -- the 'pip show' command will display information pertaining to the pip package that you specify. In this case, it will display information pertaining to Django.
+pip search Flask
+    -- pip search does something simliar to 'pip show' with the only key difference being is that it lists all packages related to Flask.
+deactivate
+    -- the deactivate command simply deactivates the current active virtual environment. In a way, it exits out.
+    
