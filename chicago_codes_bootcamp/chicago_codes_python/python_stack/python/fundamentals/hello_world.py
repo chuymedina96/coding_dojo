@@ -32,4 +32,3 @@ print(f"I love to eat {fav_food1} and {fav_food2}")
 
 
 
-
