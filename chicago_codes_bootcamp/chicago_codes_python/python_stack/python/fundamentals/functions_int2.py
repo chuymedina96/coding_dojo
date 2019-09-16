@@ -37,8 +37,9 @@ students = [
          {'first_name' : 'KB', 'last_name' : 'Tonel'}
     ]
 def iterateDictionary(some_list):
-    for x in range(0, len(some_list),1):
-        print(*some_list[x])
+    for x in range(len(some_list)):
+        for key, value in some_list[x].items():
+            print(key, value)
 
 iterateDictionary(students) 
 # should output: (it's okay if each key-value pair ends up on 2 separate lines;
