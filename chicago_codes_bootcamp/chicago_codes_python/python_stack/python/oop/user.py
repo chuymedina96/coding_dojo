@@ -11,11 +11,12 @@ class User:
         self.account_balance -= amount
         return self
     def display_user_balance(self):
-        print(self.account_balance)
+        print(f"Hello, {self.name}! Your balance is: ${self.account_balance}")
         return self
-    # def transfer_money(self, other_user, amount):
-    #     self.account_balance -= self.account_balance - amount
-    #     self.other_user = self.other_user + amount
+    def transfer_money(self, amount, other_user):
+        self.account_balance -= amount
+        other_user.account_balance += amount
+        print(f"Successfully transfered {amount} into {other_user.name}")
 
 
 michael = User("michael", "michael96@gmail.com")
@@ -44,7 +45,8 @@ jovanny.make_withdrawl(10)
 jovanny.make_withdrawl(70)
 jovanny.display_user_balance()
 
-# michael.transfer_money(chuy, 100)
+michael.transfer_money(2000, chuy)
+chuy.display_user_balance()
 
 
 
