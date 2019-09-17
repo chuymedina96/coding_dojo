@@ -6,10 +6,13 @@ class User:
 
     def make_deposit(self, amount):
         self.account_balance += amount
+        return self
     def make_withdrawl(self, amount):
         self.account_balance -= amount
+        return self
     def display_user_balance(self):
         print(self.account_balance)
+        return self
     # def transfer_money(self, other_user, amount):
     #     self.account_balance -= self.account_balance - amount
     #     self.other_user = self.other_user + amount
