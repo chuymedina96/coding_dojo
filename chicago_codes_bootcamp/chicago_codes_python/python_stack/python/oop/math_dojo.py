@@ -3,9 +3,7 @@ class MathDojo:
     	self.result = 0
     def add(self, num, *nums):
         
-    	# your code here
     def subtract(self, num, *nums):
-    	# your code here
 # create an instance:
 md = MathDojo()
 # to test:
