@@ -6,6 +6,8 @@ urlpatterns = [
     url(r'^goodbye$', views.goodbye),
     url(r'^signup$', views.signup),
     url(r'^login$', views.login),
-    url(r'^new$', views.new)
+    url(r'^new$', views.new),
+    url(r'^(?P<my_var>\w+)$', views.greet),
+
 
 ]

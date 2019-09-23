@@ -11,3 +11,5 @@ def login(request):
     return HttpResponse("Login Here")
 def new(request):
     return HttpResponse("Post new post here")
+def greet(request, my_var):
+    return HttpResponse("Hello " + my_var)
