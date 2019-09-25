@@ -1,4 +1,4 @@
-"""second_assignment URL Configuration
+"""html_table_again URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.10/topics/http/urls/
@@ -18,7 +18,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^', include('apps.second_projects_submission.urls')),
-    url(r'^', include('apps.simple_html_table.urls')),
-    url(r'^', include('apps.more_data_rendering.urls')),
+    url(r'^$', include('apps.html_table.urls'))
 ]
