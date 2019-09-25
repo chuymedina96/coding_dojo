@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<div class="container">
+    <table class="table">
+        <h2>{{title}} {{year}}</h2>
+        <thead class="thead-dark">
+            <tr>
+                <th>Cities</th>
+                <th>Activites</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td>{{ cities.0 }}</td>
+                <td>{{ activities.0 }}</td>
+            </tr>
+            <tr>
+                <td>{{ cities.1 }}</td>
+                <td>{{ activities.1 }}</td>
+            </tr>
+            <tr>
+                <td>{{ cities.2 }}</td>
+                <td>{{ activities.2 }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th>Cities</th>
+                <th> Activities</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <ul class="list-group">
+                        {% for city in cities %}
+                            <li class="list-group-item">{{city}}</li>
+                        {% endfor%}
+                    </ul>
+                </td>
+                <td>
+                    <ul class="list-group">
+                        {% for act in activities %}
+                            <li class="list-group-item">{{act}}</li>
+                        {% endfor%}
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

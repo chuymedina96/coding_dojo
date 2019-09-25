@@ -1,0 +1,14 @@
+<h3>My Django Template</h3>
+<p>Phrase: {{ phrase }}</p>
+<!--Double curly braces show a single variable-->
+
+{% for num in list %} 
+<!--Curly braces with % signs let us write Python-like code-->
+    <p>Paragraph # {{ num }}</p>
+{% endfor %} 
+<!--Since this isn't Python, we have to tell it where our for loop stops!-->
+
+{% if phrase == "hello" %} 
+<!--You can even do if checks!-->
+    <p>The phrase says hello</p>
+{% endif %}

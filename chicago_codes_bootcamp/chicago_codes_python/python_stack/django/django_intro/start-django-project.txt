@@ -1,0 +1,30 @@
+django-admin startproject your_project_name_here
+cd your_project_name_here
+python manage.py runserver
+mkdir apps
+python3 ../manage.py startapp your_app_name_here
+cd app_name
+touch urls.py
+INSTALLED_APPS = [
+       'apps.your_app_name_here', # added this line. Don't forget the comma!!
+your_project_name_here/your_project_name_here/urls.py
+from django.conf.urls import url, include	# added an import!
+# from django.contrib import admin              # comment out, or just delete
+urlpatterns = [
+    url(r'^', include('apps.your_app_name_here.urls')),	# use your app_name here
+    # url(r'^admin/', admin.sites.urls)         # comment out, or just delete
+]
+
+your_project_name_here/apps/your_app_name_here/urls.py
+from django.conf.urls import url
+from . import views
+                    
+urlpatterns = [
+    url(r'^$', views.index),
+]
+your_project_name_here/apps/your_app_name_here/views.py
+from django.shortcuts import render, HttpResponse
+def index(request):
+    return HttpResponse("this is the equivalent of @app.route('/')!"
+
+
