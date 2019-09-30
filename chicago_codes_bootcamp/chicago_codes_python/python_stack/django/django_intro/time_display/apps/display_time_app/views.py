@@ -6,6 +6,6 @@ def index(request):
     context = {
         "time": strftime("%a, %d %b %Y %I:%M:%S", localtime()),
         "date": strftime("%b %d, %Y", localtime()),
-        "now" : datetime.now()
+        "now" : datetime.now(),
     }
     return render(request,'time_display_templates/index.html', context)
