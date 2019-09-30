@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap');
+body{
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+    /* background-image:linear-gradient(rgba(0, 0, 0, .7), transparent 100%), linear-gradient(0deg, #43BDBD, transparent), url(../img/neural-pic.jpg); */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    width: 100%;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+form{
+    background: rgb(161,41,41);
+    background: linear-gradient(90deg, rgba(161,41,41,1) 0%, rgba(153,12,84,0.6208684157256652) 24%, rgba(147,0,255,0.8729692560617998) 100%);  
+    padding: 50px;
+    margin-top: 20px;
+    border-radius: 50px;
+    color: white;
+    font-family: 'Luckiest Guy', cursive;
+}
+.register{
+    text-align:center;
+    margin-top:150px;
+    color: white;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 70px;
+}
+button{
+    text-align: center;
+}
+h1{
+    font-family: 'Luckiest Guy', cursive;
+}
+h3{
+    font-family: 'Luckiest Guy', cursive;
+}

@@ -1,0 +1,112 @@
+<!Doctypte html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        {% load static %}	
+        <link rel="stylesheet" href="{% static "/public/css/main.css" %}">
+    </head>
+<div class="container">
+    <h1 class="register">Register</h2>
+    <form action="/result" method="post" class="needs-validation">
+        {% csrf_token %}
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="validationTooltip01">First name</label>
+                <input type="text" name ='firstName' class="form-control" id="validationTooltip01" placeholder="First name" value="Mark" required>
+                <div class="valid-tooltip">
+                Looks good!
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationTooltip02">Last name</label>
+                <input type="text" name='lastName' class="form-control" id="validationTooltip02" placeholder="Last name" value="Otto" required>
+                <div class="valid-tooltip">
+                Looks good!
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationTooltipUsername">Username</label>
+                <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+                </div>
+                <input type="text" name='username' class="form-control" id="validationTooltipUsername" placeholder="Username" aria-describedby="validationTooltipUsernamePrepend" required>
+                <div class="invalid-tooltip">
+                    Please choose a unique and valid username.
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <label for="validationTooltip03">City</label>
+                <input type="text" name ='city' class="form-control" id="validationTooltip03" placeholder="City" required>
+                <div class="invalid-tooltip">
+                Please provide a valid city.
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="validationTooltip04">State</label>
+                <input type="text" name='state' class="form-control" id="validationTooltip04" placeholder="State" required>
+                <div class="invalid-tooltip">
+                Please provide a valid state.
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="validationTooltip05">Zip</label>
+                <input type="text" name='zip' class="form-control" id="validationTooltip05" placeholder="Zip" required>
+                <div class="invalid-tooltip">
+                Please provide a valid zip.
+                </div>
+            </div>
+        </div>
+
+            <label for="validationTooltip01">Gender</label><br>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" id="exampleRadios1" value="male" checked>
+                <label class="form-check-label" for="exampleRadios1">
+                Male
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" value="female" id="exampleRadios2">
+                <label class="form-check-label" for="exampleRadios2">
+                Female
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" id="exampleRadios3" value="non-binary">
+                <label class="form-check-label" for="exampleRadios3">
+                Non-binary
+                </label>
+            </div><br>
+
+            <label for="validationTooltip01">Experience Level</label><br>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="less_one" id="defaultCheck1" name="less-one">
+                    <label class="form-check-label" for="defaultCheck1">
+                    < 1 Year
+                    </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="one_three" id="defaultCheck2" name="one-three">
+                <label class="form-check-label" for="defaultCheck2">
+                1-3 Years
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="three_five" id="defaultCheck3" name="three-five">
+                <label class="form-check-label" for="defaultCheck3">
+                3-5 Years
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="more_five" id="defaultCheck4" name="more-five">
+                <label class="form-check-label" for="defaultCheck4">
+                    > 5 Years
+                </label>
+            </div>
+            <button class="btn btn-primary" type='submit'>Submit form</button>  
+    </form>
+</div>
+</html>

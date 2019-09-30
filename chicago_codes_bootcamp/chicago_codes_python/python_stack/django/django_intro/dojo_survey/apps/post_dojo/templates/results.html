@@ -1,0 +1,21 @@
+<!Doctypte html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        {% load static %}	
+        <link rel="stylesheet" href="{% static "/public/css/main.css" %}">
+    </head>
+    <div class="container">
+        <h1>Displaying New users and their info</h1>
+        <h3>First Name:</h3><h4>{{firstName_on_template}}</h4>
+        <h3>Last Name:</h3><h4>{{lastName_on_template}}</h4>
+        <h3>UserName:</h3><h4>{{fullName_on_template}}</h4>
+        <h3>City:</h3><h4>{{city_from_template}}</h4>
+        <h3>State:</h3><h4>{{state_from_template}}</h4>
+        <h3>Zip:</h3><h4>{{zip_from_template}}</h4>
+        <h3>Gender:</h3><h4>{{gender_from_template}}</h4>
+        <h3>Experience:</h3><h4>Once I figure out how to do checkbox submissions, experience checkbox data will go here.</h4>
+
+
+    </div>
+</html>
