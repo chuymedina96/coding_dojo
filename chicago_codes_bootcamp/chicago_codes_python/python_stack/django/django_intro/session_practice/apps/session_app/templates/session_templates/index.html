@@ -1,0 +1,26 @@
+<!Doctype html>
+<html>  
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        {% load static %}	
+        <link rel="stylesheet" href="{% static "/public/css/main.css" %}">
+    </head>
+<body>
+<div class="container">
+    <h2 class="counter-h2">Counter</h2>
+
+    <p>Session is: {{session}}</p>
+    {{counter}} Times<br><br>
+    <button class="button-2" id="button" type="submit">+2</button>
+    <button href="/destroy" id="button" type="submit">Reset</button>
+</div>
+
+
+</body>
+<script>
+document.getElementById("button").onclick = function(){
+    alert("Button was clicked! Should increment by 2");
+}
+</script>
+
+</html>
