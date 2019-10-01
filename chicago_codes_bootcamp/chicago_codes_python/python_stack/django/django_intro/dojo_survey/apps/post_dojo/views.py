@@ -10,6 +10,9 @@ def create_user(request):
     state_from_form                 = request.POST['state']
     zip_from_form                   = request.POST['zip']
     gender_from_form                = request.POST['gender']
+    request.session['name']         = request.POST['firstName']
+    request.session['counter']      = 100
+
     # experience_less_from_form       = request.POST['less-one']
     # experience_one_three_from_form  = request.POST['one-three']
     # experience_three_five_from_form = request.POST['three-five']
