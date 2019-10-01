@@ -1,0 +1,12 @@
+body{
+    background-color: black;
+    text-align: center;
+    background: url(../img/robberpic.jpg);
+    background-size: fill;
+    background-repeat: no-repeat;
+    color: white;
+
+}
+.header-h1{
+    margin-top:130px;
+}

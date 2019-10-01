@@ -1,0 +1,40 @@
+
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+{% load static %}	
+        <link rel="stylesheet" href="{% static "/public/css/robber1.css" %}">
+
+
+<div class="container">
+    <h1 class="header-h1">Hello, this is the first part of the Robber story</h1>
+    <h2>Below you will describe your Robber Character</h2>
+    <form action="/cop" method="POST" class="needs-validation" novalidate>
+        {% csrf_token %}
+        <div class="form-row">
+        <div class="col-md-12 mb-3">
+            <label for="validationTooltip01"><h3>Bank or store?</h3></label>
+            <input type="text" class="form-control" name="food" id="validationTooltip01" placeholder="Choice of Robbery" required>
+            <div class="valid-tooltip">
+            Looks good!
+            </div>
+        </div>
+        <div class="col-md-12 mb-3">
+            <label for="validationTooltip01"><h3>Crow Bar or Gun?</h3></label>
+            <input type="text" class="form-control" name="food" id="validationTooltip01" placeholder="Choice of Weapon" required>
+            <div class="valid-tooltip">
+            Looks good!
+            </div>
+        </div>
+        <div class="col-md-12 mb-3">
+            <label for="validationTooltip01"><h3>Foot or Car?</h3></label>
+            <input type="text" class="form-control" name="food" id="validationTooltip01" placeholder="Choice of Transportation" required>
+            <div class="valid-tooltip">
+            Looks good!
+            </div>
+        </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit form</button>
+        <a href="/cop2">Next step in story</a>
+    </form>
+</div>

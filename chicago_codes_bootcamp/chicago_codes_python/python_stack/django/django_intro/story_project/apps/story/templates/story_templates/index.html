@@ -4,12 +4,12 @@
 
 
 <div class="container">
-    <form action="/story" method="POST" class="needs-validation" novalidate>
+    <form action="/story" method="POST" class="needs-validation" validate>
         {% csrf_token %}
         <div class="form-row">
         <div class="col-md-12 mb-3">
-            <label for="validationTooltip01">Name</label>
-            <input type="text" class="form-control" name="name" id="validationTooltip01" placeholder="First name" value="Mark" required>
+            <label for="validationTooltip01"><h1>Name</h1></label>
+            <input type="text" class="form-control" name="name" id="validationTooltip01" placeholder="Name" required>
             <div class="valid-tooltip">
             Looks good!
             </div>
