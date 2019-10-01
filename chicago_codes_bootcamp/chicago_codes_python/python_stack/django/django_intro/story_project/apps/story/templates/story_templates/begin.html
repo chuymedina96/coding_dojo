@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+{% load static %}	
+        <link rel="stylesheet" href="{% static "/public/css/main.css" %}">
+
+
+<div class="container">
+    <p>The name you have chose is: {{name_from_template}}</p>
+    <p>You have chosen to be a: {{radio_from_template}}</p>
+    <p>{{request_name}}</p>
+    <p>{{request_character}}</p>
+</div>
