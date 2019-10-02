@@ -6,9 +6,10 @@
         <link rel="stylesheet" href="{% static "/public/css/robber1.css" %}">
 
 
-<div class="container">
-    <h1 class="header-h1">Hello, this is the first part of the Robber story</h1>
-    <h2>Below you will describe your Robber Character</h2>
+<div class="container" id="robber">
+    <h1 class="robber-1-h1">Hello, {{request_name}}</h1>
+    <h2>So you've decided to be a <span>{{request_character}}</span>, huh? Let's see what happens</h2>
+    <h3>Below, please create your character. Than you</h3>
     <form action="/cop" method="POST" class="needs-validation" novalidate>
         {% csrf_token %}
         <div class="form-row">
@@ -35,6 +36,5 @@
         </div>
         </div>
         <button class="btn btn-primary" type="submit">Submit form</button>
-        <a href="/cop2">Next step in story</a>
     </form>
 </div>

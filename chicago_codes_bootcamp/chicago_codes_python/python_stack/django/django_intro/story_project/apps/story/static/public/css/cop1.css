@@ -9,3 +9,15 @@ body{
 form{
     margin-top:70px;
 }
+span{
+    color: blue;
+}
+.story-begins{
+    margin-top: 160px;
+    background-color: black;
+    padding: 50px;
+    border-radius: 100px;
+}
+a{
+    color: white;
+}
