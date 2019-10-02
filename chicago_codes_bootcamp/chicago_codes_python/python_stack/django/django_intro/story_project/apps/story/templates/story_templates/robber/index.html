@@ -6,30 +6,37 @@
         <link rel="stylesheet" href="{% static "/public/css/robber1.css" %}">
 
 
-<div class="container" id="robber">
+<div class="container">
     <h1 class="robber-1-h1">Hello, {{request_name}}</h1>
     <h2>So you've decided to be a <span>{{request_character}}</span>, huh? Let's see what happens</h2>
-    <h3>Below, please create your character. Than you</h3>
-    <form action="/cop" method="POST" class="needs-validation" novalidate>
+    <h3>Please create your character below. Thank you</h3>
+    <form action="/robber1" method="POST" class="needs-validation" validate>
         {% csrf_token %}
         <div class="form-row">
         <div class="col-md-12 mb-3">
-            <label for="validationTooltip01"><h3>Bank or store?</h3></label>
-            <input type="text" class="form-control" name="food" id="validationTooltip01" placeholder="Choice of Robbery" required>
+            <label for="validationTooltip01"><h3>What time do you wake up?</h3></label>
+            <input type="text" class="form-control" name="time" id="validationTooltip01" placeholder="What time do you wake up? " required>
             <div class="valid-tooltip">
             Looks good!
             </div>
         </div>
         <div class="col-md-12 mb-3">
-            <label for="validationTooltip01"><h3>Crow Bar or Gun?</h3></label>
-            <input type="text" class="form-control" name="food" id="validationTooltip01" placeholder="Choice of Weapon" required>
+            <label for="validationTooltip01"><h3>How much is your rent?</h3></label>
+            <input type="text" class="form-control" name="rent" id="validationTooltip01" placeholder="How much is your rent?" required>
             <div class="valid-tooltip">
             Looks good!
             </div>
         </div>
         <div class="col-md-12 mb-3">
-            <label for="validationTooltip01"><h3>Foot or Car?</h3></label>
-            <input type="text" class="form-control" name="food" id="validationTooltip01" placeholder="Choice of Transportation" required>
+            <label for="validationTooltip01"><h3>How many years old are you?</h3></label>
+            <input type="text" class="form-control" name="years" id="validationTooltip01" placeholder="How old are you?" required>
+            <div class="valid-tooltip">
+            Looks good!
+            </div>
+        </div>
+        <div class="col-md-12 mb-3">
+            <label for="validationTooltip01"><h3>What transportation do you use?</h3></label>
+            <input type="text" class="form-control" name="transport" id="validationTooltip01" placeholder="What transportation do you use?" required>
             <div class="valid-tooltip">
             Looks good!
             </div>
