@@ -1,0 +1,22 @@
+body{
+    text-align:center;
+    background-color: #D6FFFF;
+}
+.counter-h2{
+    font-size: 80px;
+}
+.main {
+    background-color: black;
+    border-radius: 60px;
+    padding:50px;
+    margin-top:170px;
+    color: white;
+}
+.main h2{
+    border: 2px orange solid;
+    padding: 20px;
+    padding-bottom: 25px;
+    width: 400px;
+    text-align: center;
+    margin-left: 300px;
+}

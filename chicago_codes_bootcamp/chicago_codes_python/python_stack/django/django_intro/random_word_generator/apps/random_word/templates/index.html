@@ -1,0 +1,32 @@
+<!Doctype html>
+<html>  
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        {% load static %}	
+        <link rel="stylesheet" href="{% static "/public/css/cool.css" %}">
+    </head>
+<body>
+<div class="container">
+    <div class="main">
+        <h3>Random Word(attempt #{{counter}})</h3>
+        <h2>{{random_word}}</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3><a href="/random_word" class="btn btn-outline-success">Generate</a></h3>
+                    <h3><a href="/random_word/reset" class="btn btn-outline-danger">Reset</a></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+{% comment %} <script>
+document.getElementById("button").onclick = function(){
+    alert("Button was clicked! Should increment by 2");
+}
+</script> {% endcomment %}
+
+</html>
