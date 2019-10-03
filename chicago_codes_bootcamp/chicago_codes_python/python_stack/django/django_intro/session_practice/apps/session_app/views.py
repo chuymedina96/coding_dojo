@@ -18,5 +18,9 @@ def destroy_session(request):
     request.session.pop("counter")
     return redirect("/")
 
+def add_two(request):
+    request.session['counter'] +=1
+    return redirect("/")
+
 
 

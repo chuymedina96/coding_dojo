@@ -3,7 +3,7 @@
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         {% load static %}	
-        <link rel="stylesheet" href="{% static "/public/css/main.css" %}">
+        <link rel="stylesheet" href="{% static "/public/css/style.css" %}">
     </head>
 <body>
 <div class="container">
@@ -11,16 +11,16 @@
 
     <p>Session is: {{session}}</p>
     {{counter}} Times<br><br>
-    <button class="button-2" id="button" type="submit">+2</button>
-    <button href="/destroy" id="button" type="submit">Reset</button>
+    <h5><a href="/add_two" class="btn btn-primary">Add two</a></h5>
+    <h5><a href="/destroy" class="btn btn-primary">Reset</a></h5>
 </div>
 
 
 </body>
-<script>
+{% comment %} <script>
 document.getElementById("button").onclick = function(){
     alert("Button was clicked! Should increment by 2");
 }
-</script>
+</script> {% endcomment %}
 
 </html>
