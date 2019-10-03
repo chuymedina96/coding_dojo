@@ -11,14 +11,18 @@ def story(request):
 
     name_from_form                  = request.POST['name']
     radio_from_form                 = request.POST['character']
+    gender_from_form                = request.POST['gender']
     request.session['name']         = name_from_form
     request.session['character']    = radio_from_form
+    request.session['gender']       = gender_from_form
 
     context = {
+
         "name_from_template"        : name_from_form,
         "radio_from_template"       : radio_from_form,
         "request_name"              : request.session['name'],
         "request_character"         : request.session['character'],
+        "gender"                    : request.session['gender']
 
     }
 
@@ -44,7 +48,8 @@ def cop2(request):
         "vehicle_from_template"     : request.session['vehicle'],
         "music_from_template"       : request.session['music'],
         "request_name"              : request.session['name'],
-        "request_character"         : request.session['character']
+        "request_character"         : request.session['character'],
+        "gender"                    : request.session['gender']
 
     }
 
@@ -58,7 +63,8 @@ def cop3(request):
         "vehicle_from_template"     : request.session['vehicle'],
         "music_from_template"       : request.session['music'],
         "request_name"              : request.session['name'],
-        "request_character"         : request.session['character']
+        "request_character"         : request.session['character'],
+        "gender"                    : request.session['gender']
     }
     
     return render(request, "story_templates/cop/story2.html", context)
@@ -72,7 +78,8 @@ def cop4(request):
         "vehicle_from_template"     : request.session['vehicle'],
         "music_from_template"       : request.session['music'],
         "request_name"              : request.session['name'],
-        "request_character"         : request.session['character']
+        "request_character"         : request.session['character'],
+        "gender"                    : request.session['gender']
     }
 
     return render(request, "story_templates/cop/story3.html", context)
@@ -97,6 +104,7 @@ def robber2(request):
         "rent"                      : request.session['rent'],
         "years"                     : request.session['years'],
         "transport"                 : request.session['transport'],
+        "gender"                    : request.session['gender']
         
     }
     return render(request, "story_templates/robber/story1.html", context)
@@ -112,6 +120,7 @@ def robber3(request):
         "rent"                      : request.session['rent'],
         "years"                     : request.session['years'],
         "transport"                 : request.session['transport'],
+        "gender"                    : request.session['gender']
         
     }
 
@@ -128,6 +137,7 @@ def robber4(request):
         "rent"                      : request.session['rent'],
         "years"                     : request.session['years'],
         "transport"                 : request.session['transport'],
+        "gender"                    : request.session['gender']
         
     }
 
