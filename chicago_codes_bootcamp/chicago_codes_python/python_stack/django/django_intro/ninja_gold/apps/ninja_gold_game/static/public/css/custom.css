@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+body{
+    text-align:center;
+    background-color: #321232;
+    color: gold;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.gold-box{
+    text-align: left;
+    margin-top: 100px;
+}
+.gold-counter{
+    border: 2px solid yellow;
+    padding:20px;
+}
+.first{
+    background-color: green;
+    border: 2px solid white;
+    height: 300px;
+}
+form{
+    margin-top: 50px;
+}
+.first h2{
+    margin-top: 40px;
+}
+label,
+textarea {
+    font-size: 17px;
+    text-align: left;
+}
+textarea {
+    padding: 10px;
+    line-height: 1.5;
+    border-radius: 5px;
+    width: 1200px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+    margin-top: 20px;
+
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+.activities-title{
+    margin-top: 20px;
+}
+.gold-coins{
+    font-size: 22px;
+}
+

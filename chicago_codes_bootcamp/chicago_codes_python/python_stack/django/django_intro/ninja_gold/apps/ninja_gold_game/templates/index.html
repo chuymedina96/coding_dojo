@@ -1,0 +1,67 @@
+<!Doctype html>
+<html>  
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        {% load static %}	
+        <link rel="stylesheet" href="{% static "/public/css/custom.css" %}">
+    </head>
+<body>
+
+<div class="container">
+    <div class="main">
+        <h4>Hello, this is session: {{session}}</h4>
+        <h3 class="gold-box">Your Gold: <span class="gold-counter">{{counter}}</span></h3>
+    </div><br><br>
+<div class="row">
+        <div class="col-md-3 first">
+            <h2>Farm</h2>
+            <h5>(earns 10-20 golds)</h5>
+            <form action="/process_money" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="building" value="farm" />
+                <input type="submit" class="btn btn-warning" value="Find Gold!"/>
+            </form>
+        </div>
+        <div class="col-md-3 first">
+            <h2>Cave</h2>
+            <h5>(earns 5-10 golds)</h4>
+            <form action="/process_money" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="building" value="cave" />
+                <input type="submit" class="btn btn-warning" value="Find Gold!"/>
+            </form>
+        </div>
+        <div class="col-md-3 first">
+            <h2>House</h2>
+            <h4>(earns 2-5 golds)</h4>
+            <form action="/process_money" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="building" value="house" />
+                <input type="submit" class="btn btn-warning" value="Find Gold!"/>
+            </form>
+        </div>
+        <div class="col-md-3 first">
+            <h2>Casino</h2>
+            <h4 class="gold-coins">(earns/takes 0-50 golds)</h4>
+            <form action="/process_money" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="building" value="casino" />
+                <input type="submit" class="btn btn-warning" value="Find Gold!"/>
+            </form>
+        </div>
+        <h3 class="activities-title">Activities:</h3>
+        <textarea id="story" name="story" rows="5" cols="33">
+            You earned {{number}} from the farm (TimeStamp)
+            You earned {{number}} from the farm (TimeStamp)
+            You earned {{number}} from the farm (TimeStamp)
+        </textarea>
+    </div>
+    </div>
+</body>
+{% comment %} <script>
+document.getElementById("button").onclick = function(){
+    alert("Button was clicked! Should increment by 2");
+}
+</script> {% endcomment %}
+
+</html>
