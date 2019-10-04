@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.utils.crypto import get_random_string
+import random
 
 # Create your views here.
 def index(request):
@@ -7,41 +8,48 @@ def index(request):
     if 'counter' not in request.session:
         request.session["counter"] = 0
 
-    unique_id    = get_random_string(length=23, allowed_chars='abcdefghijklmnopqrstuvwxyz')
-
     context ={
         'counter': request.session["counter"],
         'session': request.session,
-        'number' : unique_id
     }
 
     return render(request, "index.html", context)
 
 
+
 def process(request):
-    print("In the process method...")
 
     building_from_form  = request.POST['building']
     request.session['building'] = building_from_form
 
     if request.POST['building'] == 'farm':
-        request.session["counter"] += 15
-        print("fewfewfu22**")
+
+        randFarm = random.randint(10,20)
+        request.session["counter"] += randFarm
 
     elif request.POST['building'] == 'cave':
-        request.session["counter"] += 10
-        print("ffe")
+
+        randCave = random.randint(5,10)
+        request.session["counter"] += randCave
 
     elif request.POST['building'] == 'house':
-        request.session["counter"] += 3
+
+        randHouse = random.randint(2,5)
+        request.session["counter"] += randHouse
 
     elif request.POST['building'] == 'casino':
-        request.session["counter"] += 50
+        chance = random.randint(-50,50)
+
+        request.session["counter"] += chance
+
+    context ={
+        "activity" : request.session['building'],
+    }
+
+    return redirect("/", context)
 
 
-
-    return redirect("/")
 
 def destroy_session(request):
-    request.session.pop["counter"]
+    request.session.clear()
     return redirect("/")

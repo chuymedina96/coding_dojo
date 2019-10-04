@@ -9,8 +9,8 @@
 
 <div class="container">
     <div class="main">
-        <h4>Hello, this is session: {{session}}</h4>
         <h3 class="gold-box">Your Gold: <span class="gold-counter">{{counter}}</span></h3>
+        <h3><a href="/reset" class="btn btn-danger">Reset</a></h3>
     </div><br><br>
 <div class="row">
         <div class="col-md-3 first">
@@ -51,9 +51,7 @@
         </div>
         <h3 class="activities-title">Activities:</h3>
         <textarea id="story" name="story" rows="5" cols="33">
-            You earned {{number}} from the farm (TimeStamp)
-            You earned {{number}} from the farm (TimeStamp)
-            You earned {{number}} from the farm (TimeStamp)
+            Earned something gold coins from the {{request.session.counter}} at (TimeStamp)
         </textarea>
     </div>
     </div>
