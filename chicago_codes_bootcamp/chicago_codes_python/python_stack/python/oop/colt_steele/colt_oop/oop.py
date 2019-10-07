@@ -74,52 +74,69 @@
 # # ADDING INSTANCE METHODS
 
 
-# class User:
-#     active_users = 0
-#     def __init__(self, first, last, age):
-#         self.first = first
-#         self.last = last
-#         self.age = age
-#         User.active_users +=1
-#     def logOut(self):
-#         User.active_users -=1
-#         return f"{self.first} has logged out"
+class User:
+    active_users = 0
 
-#     def fullName(self): # always need to includees self, doesnt need to be self can be any name, but most use self
-#         return f"{self.first} {self.last}"
-#     def initials(self):
-#         return f"{self.first[0]}.{self.last[0]}"
-#     def likes(self, thing):
-#         self.thing = thing
-#         return f"{self.first} likes {self.thing}"
-#     def is_Senior(self):
-#         return self.age >= 65 # this right here is a boolean expression. Similar to: if(this.true){} is js :)
-#     def birthday(self):
-#         self.age +=1
-#         return f"Happy {self.age}th, {self.first}"
-#     def sayHello(self):
-#         print("Hello!!")
+    @classmethod #first class method :)
+    def display_active_users(cls):
+        return f"There are currently {cls.active_users} active users"
+    @classmethod
+    def from_string(cls, data_str):
+        
+
+    def __init__(self, first, last, age):
+        self.first = first
+        self.last = last
+        self.age = age
+        User.active_users +=1
+    def logOut(self): 
+        User.active_users -=1
+        return f"{self.first} has logged out"
+
+    def fullName(self): # always need to includees self, doesnt need to be self can be any name, but most use self
+        return f"{self.first} {self.last}"
+    def initials(self):
+        return f"{self.first[0]}.{self.last[0]}"
+    def likes(self, thing):
+        self.thing = thing
+        return f"{self.first} likes {self.thing}"
+    def is_Senior(self):
+        return self.age >= 65 # this right here is a boolean expression. Similar to: if(this.true){} is js :)
+    def birthday(self):
+        self.age +=1
+        return f"Happy {self.age}th, {self.first}"
+    def sayHello(self):
+        print("Hello!!")
 
 
 
 
-# print(User.active_users)
-# user1 = User("Joe", "Smith", 17)
-# user2 = User("Blanca", "Lopez", 41)
+
 # print(User.active_users)
 # print(user2.logOut())
 # print(User.active_users)
+user1 = User("Joe", "Smith", 17)
+user2 = User("Blanca", "Lopez", 41)
 
-# # print(user2.fullName())
-# # print(user1.likes("Ice Cream"))
-# # print(user2.likes("chips"))
-# # print(user2.initials())
-# # print(user1.initials())
-# # print(user1.age)
-# # print(user1.birthday())
-# # print(user1.age)
-# # print(user2.is_Senior())
-# # print(user1.sayHello())
+print(User.display_active_users())
+user3 = User("Chuy", "Medina", 24)
+user4 = User("Lali", "Avila", 24)
+print(User.display_active_users()) # this is not an instance of user, but a method of user, hence a class method
+user3 = User("Yo", "Test", 24)
+user4 = User("Test", "Yo", 24)
+print(user2.logOut())
+print(User.display_active_users())
+
+# print(user2.fullName())
+# print(user1.likes("Ice Cream"))
+# print(user2.likes("chips"))
+# print(user2.initials())
+# print(user1.initials())
+# print(user1.age)
+# print(user1.birthday())
+# print(user1.age)
+# print(user2.is_Senior())
+# print(user1.sayHello())
 
 
 # # CLASS ATTRIBUTES
@@ -149,23 +166,27 @@
 # print(Pet.allowed)
 
 
-class Chicken:
-    total_eggs = 0
-    def __init__(self, species, name, eggs=0):
-        self.species = species
-        self.name = name
-        self.eggs = eggs
-    def lay_egg(self):
-        self.eggs += 1
-        Chicken.total_eggs += 1
+# class Chicken:
+#     total_eggs = 0
+#     def __init__(self, species, name, eggs=0):
+#         self.species = species
+#         self.name = name
+#         self.eggs = eggs
+#     def lay_egg(self):
+#         self.eggs += 1
+#         Chicken.total_eggs += 1
         
-c1 = Chicken(name="Alica", species="Patridge Silkie")
-c2 = Chicken(name="Amelia", species="Speckled Sussex")
-Chicken.total_eggs
-c1.lay_egg()
-c2.lay_egg()
-c2.lay_egg()
-print(Chicken.total_eggs)
+# c1 = Chicken(name="Alica", species="Patridge Silkie")
+# c2 = Chicken(name="Amelia", species="Speckled Sussex")
+# Chicken.total_eggs
+# c1.lay_egg()
+# c2.lay_egg()
+# c2.lay_egg()
+# print(Chicken.total_eggs)
+
+
+
+
 
 
 

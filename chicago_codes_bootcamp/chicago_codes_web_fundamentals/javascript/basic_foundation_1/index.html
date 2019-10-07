@@ -174,7 +174,7 @@ Example: removeAt([4, 1, 8, 7], 2) should return 8.*/
 function removeAt(arr,ind){
     var temp= arr[ind];
     for(var i = ind; i < arr.length-1; i++){
-    arr[i] = arr[i+1];
+        arr[i] = arr[i+1];
     }
     arr.pop();
     console.log(arr);
