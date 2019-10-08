@@ -182,5 +182,17 @@ function removeAt(arr,ind){
 }
 removeAt([4,1,8,7],0);
 
+function countNonSpace(str){
+  var count =0;
+  for(var i =0; i<str.length; i++){
+    if(str[i] != " "){
+      count+=1;
+      console.log(i);
+    }
+  }
+  return count;
+}
+countNonSpace("No spaces at all")
+
 </script>
 </html>

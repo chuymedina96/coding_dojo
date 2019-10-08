@@ -1,0 +1,20 @@
+python3 manage.py shell
+from apps.users_app.models import User
+User.objects.create(firstName="Jesus", lastName="Medina", email="chuymedina96@gmail.com", age=24)
+User.objects.create(firstName="Lali", lastName="Avila", email="xitlaliavila8113@gmail.com", age=23)
+User.objects.create(firstName="Jovanny", lastName="Delgadillo", email="something96@gmail.com", age=26)
+User.objects.all()
+User.objects.last()
+User.objects.first()
+update_user = User.objects.get(id=3)
+update_user.lastName = "Pancakes"
+update_user.save()
+delete_user = User.objects.get(id=2)
+delete_user.delete()
+User.objects.all().order_by("firstName") 
+User.objects.all().order_by("-firstName")
+
+
+
+
+
