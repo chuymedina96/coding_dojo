@@ -60,7 +60,8 @@ Author: Lau, Tzu
 >>> three_auth.books.all()
 <QuerySet [Book: Java, Author: <QuerySet [Author: Jane, Austen, Author: Emily, Dickinson, Author: Bill, Shakespeare, Author: Lau, Tzu]>]>
 
-
+five_book = Book.objects.get(id=5)
+five_book.author.all()
 
 
 
