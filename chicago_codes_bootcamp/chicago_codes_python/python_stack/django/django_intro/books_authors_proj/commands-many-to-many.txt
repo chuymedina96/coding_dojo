@@ -1,0 +1,74 @@
+python3 manage.py makemigrations
+python3 manage.py migrate
+python3 manage.py shell
+
+>>> this_auth = Author.objects.get(id=1)
+>>> this_book = Book.objects.get(id=1)
+>>> this_book.author.add(this_auth)
+>>> this_book.save()
+
+>>> other_book = Book.objects.get(id=2)
+>>> other_book.author.add(this_auth)
+>>> other_book.save()
+
+>>> other_auth = Author.objects.get(id=2)
+>>> bookOne = Book.objects.get(id=1)
+>>> bookTwo = Book.objects.get(id=2)
+
+>>> bookThree = Book.objects.get(id=3)
+>>> bookOne.author.add(other_auth)
+>>> bookOne.save()
+>>> bookTwo.author.add(other_auth)
+>>> bookTwo.save()
+>>> bookThree.author.add(other_auth)
+>>> bookThree.save()
+
+
+auth_fourth = Author.objects.get(id=4)
+all_books = Book.objects.all()
+
+for book in all_books:
+    book.author.add(auth_fourth)
+
+>>> book_three = Book.objects.get(id=3)
+>>> book_three.author.all()
+<QuerySet [Author: Emily, Dickinson, Author: Bill, Shakespeare]>
+
+>>> Author.objects.all()
+<QuerySet [Author: Jane, Austen, Author: Emily, Dickinson, Author: Fyodor, Dostoevksy, Author: Bill, Shakespeare, Author: Lau, Tzu]>
+>>> Book.objects.get(id=3)
+Book: Python, Author: <QuerySet [Author: Emily, Dickinson, Author: Bill, Shakespeare]>
+>>> first_auth_remove = Author.objects.get(id=2)
+>>> third_book = Book.objects.get(id=3)
+>>> third_book.author.remove(first_auth_remove)
+>>> third_book
+Book: Python, Author: <QuerySet [Author: Bill, Shakespeare]>
+>>> third_book.save()
+
+>>> second_book = Book.objects.get(id=2)
+>>> five_auth = Author.objects.get(id=5)
+>>> second_book.author.add(five_auth)
+>>> second_book
+Book: Java, Author: <QuerySet [Author: Jane, Austen, Author: Emily, Dickinson, Author: Bill, Shakespeare, Author: Lau, Tzu]>
+>>> second_book.save()
+
+>>> three_auth = Author.objects.get(id=5)
+>>> three_auth
+Author: Lau, Tzu
+>>> three_auth.books
+<django.db.models.fields.related_descriptors.create_forward_many_to_many_manager.<locals>.ManyRelatedManager object at 0x10bfed690>
+>>> three_auth.books.all()
+<QuerySet [Book: Java, Author: <QuerySet [Author: Jane, Austen, Author: Emily, Dickinson, Author: Bill, Shakespeare, Author: Lau, Tzu]>]>
+
+
+
+
+
+
+
+
+
+
+
+
+

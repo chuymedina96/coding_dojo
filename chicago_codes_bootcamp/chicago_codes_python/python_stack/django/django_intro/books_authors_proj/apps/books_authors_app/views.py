@@ -7,4 +7,4 @@ def index(request):
         "authors": Author.objects.all(),
         "books"  : Book.objects.all()
     }
-    return render(request, "book/index.html")
+    return render(request, "book/index.html", context)
