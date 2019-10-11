@@ -1,0 +1,65 @@
+python3 manage.py makemigrations
+python3 manage.py migrate
+python3 manage.py shell
+
+>>> Book.objects.create(title="C Sharp")
+Book: C Sharp
+>>> Book.objects.create(title="Java")
+Book: Java
+>>> Book.objects.create(title="Python")
+Book: Python
+>>> Book.objects.create(title="PHP")
+Book: PHP
+>>> Book.objects.create(title="Ruby")
+Book: Ruby
+
+>>> Author.objects.create(firstName="Jane", lastName="Austen")
+Author: Jane
+>>> Author.objects.create(firstName="Emily", lastName="Dickinson")
+Author: Emily
+>>> Author.objects.create(firstName="Fyodor", lastName="Dostoevksy")
+Author: Fyodor
+>>> Author.objects.create(firstName="William", lastName="Shakespeare")
+Author: William
+>>> Author.objects.create(firstName="Lau", lastName="Tzu")
+Author: Lau
+
+>>> Book.objects.get(id=1)
+Book: C Sharp
+>>> c = Book.objects.get(id=1)
+>>> c.title="C#"
+>>> c.save()
+
+>>> a = Author.objects.get(id=4)
+>>> a
+Author: William
+>>> a.firstName="Bill"
+>>> a.save()
+
+>>> book_update = Book.objects.get(id=1)
+>>> book_update.author = Author.objects.get(id=1)
+>>> book_update.save()
+
+>>> book_again= Book.objects.get(id=2)
+>>> book_again.author = Author.objects.get(id=1)
+>>> book_again.save()
+
+>>> another_one = Book.objects.get(id=3)
+>>> another_one.author = Author.objects.get(id=2)
+>>> another_one.save()
+
+>>> third_auth = Book.objects.get(id=4)
+>>> third_auth.author = Author.objects.get(id=3)
+>>> third_auth.save()
+
+>>> again = Book.objects.get(id=5)
+>>> again.author = Author.objects.get(id=4)
+>>> again.save()
+
+>>> third_auth = Book.objects.get(id=3)
+>>> third_auth.author
+Author: Emily, Dickinson
+
+>>> auth_wrote = Book.objects.filter(author=Author.objects.get(id=1))
+>>> auth_wrote
+<QuerySet [Book: C#, Author: Jane Austen, Book: Java, Author: Jane Austen]>
