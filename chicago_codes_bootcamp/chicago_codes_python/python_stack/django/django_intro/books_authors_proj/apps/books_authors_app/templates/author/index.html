@@ -11,16 +11,20 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h2>Add a Book:</h2>
-                <form action="/add_book" method="POST">
+                <h2>Add an Author</h2>
+                <form action="/add_author" method="POST">
                     {% csrf_token %}
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Title:</label>
-                        <input type="input" class="form-control" name="title" aria-describedby="emailHelp" placeholder="Enter Book Title">
+                        <label for="exampleInputEmail1">First Name:</label>
+                        <input type="input" class="form-control" name="firstName" aria-describedby="emailHelp" placeholder="First Name of Author">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Description</label>
-                        <textarea type="textarea" class="form-control" name="describe" id="exampleInputPassword1" placeholder="Description of Book"></textarea>
+                        <label for="exampleInputEmail1">Last Name:</label>
+                        <input type="input" class="form-control" name="lastName" aria-describedby="emailHelp" placeholder="Last Name of Author">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Notes</label>
+                        <textarea type="textarea" class="form-control" name="notes" id="exampleInputPassword1" placeholder="Notes on Author"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
@@ -36,11 +40,11 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {% for book in books%}
+                        {% for author in authors%}
                         <tr>
-                            <th>{{book.id}}</th>
-                            <td>{{book.title}}</td>
-                            <td><a href="/books/{{book.id}}">View</a></td>
+                            <th>{{author.id}}</th>
+                            <td>{{author.firstName}} {{author.lastName}}</td>
+                            <td><a href="/authors/{{author.id}}">View</a></td>
                         </tr>
                         {% endfor%}
                     </tbody>

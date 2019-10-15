@@ -4,6 +4,7 @@ from django.db import models
 class Author(models.Model):
     firstName   = models.CharField(max_length=255)
     lastName    = models.CharField(max_length=255)
+    notes       = models.CharField(max_length=255)
     created_at  = models.DateTimeField(auto_now_add=True)
     updated_at  = models.DateTimeField(auto_now=True)
 
@@ -22,4 +23,4 @@ class Book(models.Model):
         # if self.author.all() == None:
         #     return f"Book: {self.title}, Author: None"
         # else:
-        return f"Book: {self.title} Author: {boop}"
+        return f"Book: {self.title} Author: {boop} ID: {self.id}"
