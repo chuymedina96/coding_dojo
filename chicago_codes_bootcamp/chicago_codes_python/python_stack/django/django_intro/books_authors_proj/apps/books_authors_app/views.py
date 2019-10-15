@@ -43,7 +43,7 @@ def newAuthor(request):
         "author" : Author.objects.create(firstName=firstName, lastName=lastName, notes=notes)
     }
 
-    return redirect("/authors", context)
+    return redirect("/authors")
 
 
 def newBook(request):
@@ -56,7 +56,7 @@ def newBook(request):
         "book" : Book.objects.create(title=book, desc=describe)
     }
 
-    return redirect("/", context)
+    return redirect("/")
 
 
 def viewBook(request, book_id):
