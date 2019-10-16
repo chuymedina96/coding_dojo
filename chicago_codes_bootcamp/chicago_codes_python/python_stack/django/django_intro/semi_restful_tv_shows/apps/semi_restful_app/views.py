@@ -3,6 +3,10 @@ from .models import *
 
 
 # Create your views here.
+def root(request):
+
+    return redirect("/shows")
+
 def index(request):
     return render(request, "shows/index.html")
 
@@ -17,7 +21,7 @@ def shows(request):
 
 
 def createShow(request):
-
+    
     show                            = request.POST['title']
     network                         = request.POST['network']
     desc                            = request.POST['description']
@@ -26,11 +30,13 @@ def createShow(request):
     request.session['network']      = network
     request.session['description']  = desc
     request.session['release']      = release
+
+    createdShow = Show.objects.last() 
     
     context ={
         "shows" : Show.objects.create(title=show, network=network, desc=desc, release=release)
     }
-    return redirect("/shows")
+    return redirect(f"/shows/{createdShow.id}")
 
 
 def viewShow(request, show_id):
