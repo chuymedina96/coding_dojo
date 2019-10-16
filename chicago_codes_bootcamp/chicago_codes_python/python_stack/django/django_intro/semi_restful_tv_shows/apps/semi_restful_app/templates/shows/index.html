@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shows</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        {% load static%}
+        <link rel="stylesheet" href="{% static "public/css/animate.css" %}"/>
+        <link rel="stylesheet" href="{% static "public/css/main.css" %}"/>
+    </head>
+
+<body>
+    <div class="container">
+        <h2 class="go-back-link"><a href="/shows"><< Go back</a></h2>
+        <h2 class="text-center form-title">Add New Show!</h2>
+
+        <form action="/shows/create" method="POST" class="animated fadeIn">
+            {% csrf_token %}
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label>Title</label>
+                    <input type="text" name="title" class="form-control" placeholder="Title of Show">
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Network</label>
+                    <input type="text" name = "network" class="form-control" placeholder="Network">
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Release Date</label>
+                    <input type="date" name ="release" class="form-control" placeholder="Release Date">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="description">Description</label>
+                <textarea type="textarea" name="description" class="form-control" placeholder="Description" style="height: 200px;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" >Create</button>
+        </form>
+
+    </div>
+</body>
+</html>

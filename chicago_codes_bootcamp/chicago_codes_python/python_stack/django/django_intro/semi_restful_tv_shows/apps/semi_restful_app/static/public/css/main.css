@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Fascinate+Inline|Modak|Ropa+Sans&display=swap');
+body{
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+} 
+.form-title{
+    font-size: 50px;
+    color: #e8ffef;
+    font-family: 'Fascinate Inline', cursive;
+    margin-top: -30px;
+    padding-bottom: 100px;
+}
+label{
+    font-family: 'Ropa Sans', sans-serif;
+    color: white;
+}
+input{
+    font-family: 'Ropa Sans', sans-serif;
+}
+textarea{
+    font-family: 'Ropa Sans', sans-serif;
+    margin-left:330px;
+}
+button{
+    font-family: 'Ropa Sans', sans-serif;
+    margin-left: 330px;
+}
+.go-back-link a{
+    font-family: 'Ropa Sans', sans-serif;
+    color: white;
+}
+.go-back-link a:hover{
+    color: #92f0ae;
+}
+table{
+    background-color: white;
+}
+.addShow a{
+    float: right;
+    color: white;
+}
+.form-row{
+    width: 40%;
+    margin-left:330px;
+}
+.form-group{
+    width: 40%;
+}
+.description{
+    margin-left: 330px;
+}

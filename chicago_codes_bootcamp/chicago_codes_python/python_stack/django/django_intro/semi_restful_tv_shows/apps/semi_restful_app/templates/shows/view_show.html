@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shows</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        {% load static%}
+        <link rel="stylesheet" href="{% static "public/css/main.css" %}"/>
+    </head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Show Title: {{show.title}}</h2>
+                <h2>ID: {{show.id}}</h2>
+                <h2>Network: {{show.network}}</h2>
+                <h2>Release: {{show.release}}
+                <h2>Description: {{show.desc}}</h2>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>
