@@ -28,3 +28,23 @@ def index(request):
     return HttpResponse("this is the equivalent of @app.route('/')!"
 
 
+errors = Show.objects.basic_validator(request.POST)
+
+    if len(errors) > 0:
+        # if the errors dictionary contains anything, loop through each key-value pair and make a flash message
+        for key, value in errors.items():
+            messages.error(request, value)
+        # redirect the user back to the form to fix the errors
+        return redirect(f'/shows/{show_id}/edit')
+
+    else:
+        show = Show.objects.get(id = show_id)
+        show.title      = request.POST['title']
+        show.network    = request.POST['network']
+        show.release    = request.POST['release']
+        show.desc       = request.POST['description']
+        show.save()
+        messages.success(request, "Blog successfully updated")
+
+        return redirect(f'/shows/{show_id}')
+

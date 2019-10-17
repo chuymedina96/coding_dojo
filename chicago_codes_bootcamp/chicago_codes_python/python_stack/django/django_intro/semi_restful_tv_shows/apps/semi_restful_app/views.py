@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponse, redirect
+from django.contrib import messages
 from .models import *
 
 
@@ -20,23 +21,29 @@ def shows(request):
     return render(request, "shows/shows_table.html", context)
 
 
-def createShow(request):
+def createShow(request): 
     
-    show                            = request.POST['title']
-    network                         = request.POST['network']
-    desc                            = request.POST['description']
-    release                         = request.POST['release']
-    request.session['title']        = show
-    request.session['network']      = network
-    request.session['description']  = desc
-    request.session['release']      = release
+    errors = Show.objects.basic_validator(request.POST)
 
-    createdShow = Show.objects.last() 
-    
-    context ={
-        "shows" : Show.objects.create(title=show, network=network, desc=desc, release=release)
-    }
-    return redirect(f"/shows/{createdShow.id}")
+    if len(errors) > 0:
+        # if the errors dictionary contains anything, loop through each key-value pair and make a flash message
+        for key, value in errors.items():
+            messages.error(request, value)
+        # redirect the user back to the form to fix the errors
+        return redirect('/shows/new')
+
+    else:
+        show                            = request.POST['title']
+        network                         = request.POST['network']
+        desc                            = request.POST['description']
+        release                         = request.POST['release']
+
+        Show.objects.create(title=show, network=network, desc=desc, release=release)
+
+        createdShow = Show.objects.last()
+        messages.success(request, "Show Created Successfully :)")
+
+        return redirect(f"/shows/{createdShow.id}")
 
 
 def viewShow(request, show_id):
@@ -65,11 +72,22 @@ def editShow(request, show_id):
 
 def updateShow(request, show_id):
 
-    show            = Show.objects.get(id=show_id)
-    show.title      = request.POST['title']
-    show.network    = request.POST['network']
-    show.release    = request.POST['release']
-    show.desc       = request.POST['description']
-    show.save()
+    errors = Show.objects.basic_validator(request.POST)
 
-    return redirect(f"/shows/{show_id}")
+    if len(errors) > 0:
+        # if the errors dictionary contains anything, loop through each key-value pair and make a flash message
+        for key, value in errors.items():
+            messages.error(request, value)
+        # redirect the user back to the form to fix the errors
+        return redirect(f'/shows/{show_id}/edit')
+
+    else:
+        show = Show.objects.get(id = show_id)
+        show.title      = request.POST['title']
+        show.network    = request.POST['network']
+        show.release    = request.POST['release']
+        show.desc       = request.POST['description']
+        show.save()
+        messages.success(request, "Show Successfully Updated! :)")
+
+    return redirect("/shows")
