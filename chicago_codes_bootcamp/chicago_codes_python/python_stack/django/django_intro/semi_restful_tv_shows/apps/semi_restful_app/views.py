@@ -37,7 +37,7 @@ def createShow(request):
         network                         = request.POST['network']
         desc                            = request.POST['description']
         release                         = request.POST['release']
-        
+
         # checking for duplicate data in database
         if(Show.objects.filter(title=show).exists()):
             messages.error(request, "That Show already exists inside the db buddy!")
@@ -49,8 +49,6 @@ def createShow(request):
         messages.success(request, "Show Created Successfully :)")
 
         return redirect(f"/shows/{createdShow.id}")
-
-
 
 
 def viewShow(request, show_id):

@@ -1,0 +1,100 @@
+<!Doctype html>
+    <head>
+        <title>Login/Registration</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        {% load static %}
+        <link rel="stylesheet" href="{% static "/public/css/main.css" %}">
+    </head>
+<html>
+<body>
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+    <a class="navbar-brand" href="#">Login/Registration App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+    </ul>
+    <button class="btn btn-info my-2 my-sm-0" id="register-button" type="button">Register</button>
+    <button class="btn btn-info my-2 my-sm-0" type="submit">Login</button>
+    </div>
+</nav>
+    <div class="container">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    {{message}}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endfor %}
+        {% endif %}
+        <div class="row">
+            <div class="col-md-6"><br><br>
+                <header class="register-header">
+                    <h2 class="register-h2">Login to our site ...</h2>
+                    <h5 class="register-h5">You need to write your email and password</h5>
+                </header>
+
+                <form action="/login" method="POST">
+                    {% csrf_token %}
+                    <input class="form-control" type="email" name="email" placeholder="Email"><br>
+                    <input class="form-control" type="password" name="password" placeholder="Password"><br>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">sign in</button>
+                    <p class="forgot-pw-p"><a href="#">Forgot your password?</a></p>
+                </form>
+
+            </div>
+            <div class="col-md-6"><br><br>
+                <header class="sign-up-borders">
+                    <h2 class="register-h2">Sign up now ...</h2>
+                    <h5 class="register-h5">Fill in info below to have an account</h5>
+                </header>
+
+                <form action="/register" method="POST">
+                    {% csrf_token %}    
+                    {% if request.session.firstName %}
+                        <input class="form-control" type="text" name="firstName" value="{{request.session.firstName}}"><br>
+                    {% else %}
+                        <input class="form-control" type="text" name="firstName" placeholder="First Name"  onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)"><br>
+                    {% endif %}
+
+                    {% if request.session.lastName %}
+                        <input class="form-control" type="text" name="lastName" value={{request.session.lastName}}><br>
+                        {% else %}
+                        <input class="form-control" type="text" name="lastName" placeholder="Last Name" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)"><br>
+                    {% endif %}
+
+                    <input class="form-control" type="text" name="email" placeholder="Email"><br>
+
+                    <input class="form-control" type="password" name="password" placeholder="Password"><br>
+                    <input class="form-control" type="password" name="confirm" placeholder="Confirm Password"><br>
+                    
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">sign up</button>
+
+                </form>
+            </div>
+        </div>
+        <h4 class="login-h4">... or login with</h4>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="first-div"><img src="{% static "/public/img/fb.jpg" %}"></div>
+            </div>
+            <div class="col-md-2">
+                <div class="first-div"><img src="{% static "/public/img/twitter.jpg" %}"></div>
+            </div>
+            <div class="col-md-2">
+                <div class="first-div"><img src="{% static "/public/img/gmail.png" %}"></div>
+            </div>
+        </div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
