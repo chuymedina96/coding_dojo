@@ -80,10 +80,9 @@ class User:
     @classmethod #first class method :)
     def display_active_users(cls):
         return f"There are currently {cls.active_users} active users"
-    @classmethod
-    def from_string(cls, data_str):
+    #@classmethod
+    # def from_string(cls, data_str):
         
-
     def __init__(self, first, last, age):
         self.first = first
         self.last = last

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>LOGIN REGISTER</title>
+  <style>
+    .card {
+      width: 400px;
+    }
+  </style>
+</head>
+
+<body class="bg-dark">
+  <div class="d-flex vh-100 align-items-center">
+    <div class="container">
+      <div class="card-deck justify-content-center">
+        <form action="/register" method="post">
+          {% csrf_token %}
+          <div class="card">
+            <div class="card-header">
+              <h3 class="mb-0">REGISTER</h3>
+            </div>
+            <div class="card-body">
+
+              {% if messages %}
+              {% for message in messages %}
+              {% if "register" in message.extra_tags %}
+              <div class="alert alert-danger" role="alert">
+                {{message}}
+              </div>
+              {% endif %}
+              {% endfor %}
+              {% endif %}
+
+              <label for="username">USERNAME:</label>
+              <input class="form-control mb-3" type="text" name="username">
+              <label for="email_reg">EMAIL:</label>
+              <input class="form-control mb-3" type="text" name="email_reg">
+              <label for="password_reg">PASSWORD:</label>
+              <input class="form-control mb-3" type="password" name="password_reg">
+              <label for="password_confirm">CONFIRM PASSWORD:</label>
+              <input class="form-control mb-3" type="password" name="password_confirm">
+            </div>
+            <div class="card-footer">
+              <button type="submit" class="btn btn-primary btn-block">REGISTER</button>
+            </div>
+          </div>
+        </form>
+        <form action="/login" method="post">
+          {% csrf_token %}
+          <div class="card">
+            <div class="card-header">
+              <h3 class="mb-0">LOGIN</h3>
+            </div>
+            <div class="card-body">
+
+                {% if messages %}
+                {% for message in messages %}
+                {% if "login" in message.extra_tags %}
+                <div class="alert alert-danger" role="alert">
+                  {{message}}
+                </div>
+                {% endif %}
+                {% endfor %}
+                {% endif %}
+  
+              <label for="email_log">EMAIL:</label>
+              <input class="form-control mb-3" type="text" name="email_log">
+              <label for="password_log">PASSWORD:</label>
+              <input class="form-control mb-3" type="password" name="password_log">
+            </div>
+            <div class="card-footer">
+              <button type="submit" class="btn btn-primary btn-block">LOGIN</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

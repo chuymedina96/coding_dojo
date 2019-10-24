@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
+import bcrypt
 from .models import *
 
 # Create your views here.
@@ -23,6 +24,7 @@ def register(request):
         return redirect('/')
 
     else:
+        hash_pw                         = bcrypt.hashpw(request.POST['password'].encode(), bcrypt.gensalt())
         firstName                       = request.POST['firstName']
         lastName                        = request.POST['lastName']
         email                           = request.POST['email']
@@ -37,7 +39,7 @@ def register(request):
 
         else: 
 
-            User.objects.create(firstName=firstName, lastName=lastName, email=email, password=password)
+            User.objects.create(firstName=firstName, lastName=lastName, email=email, password=hash_pw)
 
             createdUser = User.objects.last()
 
@@ -45,7 +47,7 @@ def register(request):
 
             messages.success(request, "User Created Successfully :)")
 
-            return redirect("/success")
+            return redirect("/wall")
 
 def success(request):
 
@@ -60,14 +62,14 @@ def success(request):
     else:
 
         loggedInUser    = User.objects.get(id=request.session["user_id"])
-        # newSessionUser  = User.objects.get(id=request.session["loggedInUser_id"])
 
         context={
-
             "loggedInUser"  : loggedInUser,
-            "all_users"     : User.objects.all()
+            "all_users"     : User.objects.all(),
+            "all_messages"  : Message.objects.all().order_by("-created_at"),
+            
         }
-        return render(request, "login-register/success.html", context)
+        return render(request, "login-register/wall.html", context)
 
 def logout(request):
     request.session.flush()
@@ -78,16 +80,30 @@ def logout(request):
 
 def login(request):
 
-    email                           = request.POST['email']
-    password                        = request.POST['password']
-    
-    user = User.objects.get(email=email)
+    errors = User.objects.login_validator(request.POST)
 
-    if user.password == password:
-        request.session['user_id']   = user.id
-        return redirect("/success")
+    if len(errors) > 0:
+        request.session['email']        = request.POST['email']
+        request.session['password']     = request.POST['password']
+        # if the errors dictionary contains anything, loop through each key-value pair and make a flash message
+        for key, value in errors.items():
+            messages.error(request, value)
+        # redirect the user back to the form to fix the errors
+        return redirect('/')
     else:
-        return redirect("/success")
+        email                           = request.POST['email']
+        password                        = request.POST['password']
+        
+        user_set = User.objects.filter(email=email)
+        user = user_set[0]
+
+        if bcrypt.checkpw(password.encode(), user.password.encode()):
+            request.session['user_id']   = user.id
+            messages.success(request, f"Welcome back, {user.firstName}")
+            return redirect("/wall")
+        else:   
+            messages.error(request, "Password did not match with any User in database, sorry try again!")
+            return redirect("/wall")
 
     # if (User.objects.filter(email=email).exists() and User.objects.filter(password=password).exists()):
     #     request.session['email']        = email
@@ -95,3 +111,37 @@ def login(request):
 
     #     messages.error(request, "That email is already taken, sorry.")
     #     return redirect("/success")
+
+def newMessage(request):
+
+    message = request.POST['message']
+
+    userMessage = Message.objects.create(message=message)
+    user = User.objects.get(id=request.session['user_id'])
+    user.messages.add(userMessage)
+    # something to target user and save them to a variable
+    #something to add the message to them, then save
+    user.save()
+    messages.success(request, "Message created successfully")
+
+    return redirect("/wall")
+
+def createComment(request):
+
+    comment  = request.POST['comment']
+    
+    userComment = Comment.objects.create(comment=comment, message=Message.objects.get(id=request.POST['message_id']), user=User.objects.get(id=request.session['user_id']))
+
+    userComment.save()
+
+    return redirect("/wall")
+
+
+
+
+
+
+
+    
+
+

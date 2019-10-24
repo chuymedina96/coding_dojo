@@ -3,6 +3,7 @@ from django.db import models
 
 
 class UserManager(models.Manager):
+
     def basic_validator(self, postData):
         errors = {}
         # add keys and values to errors dictionary for each invalid field
@@ -19,14 +20,49 @@ class UserManager(models.Manager):
 
         return errors
 
+    def login_validator(self, postData):
+        errors = {}
+        if len(postData["email"]) < 1:
+            errors["email"] = "Email cannot be blank"
+        if len(postData["password"]) < 1:
+            errors["password"] = "Password cannot be blank"
+
+        return errors
+        
+
 
 class User(models.Model):
     firstName   = models.CharField(max_length=255)
     lastName    = models.CharField(max_length=255)
     email       = models.EmailField(max_length=255)
     password    = models.CharField(max_length=255)
+    created_at  = models.DateTimeField(auto_now_add=True)
+    updated_at  = models.DateTimeField(auto_now=True)
     objects     = UserManager()
 
     def __repr__(self):
         return f" ID: {self.id}, Name: {self.firstName} {self.lastName}, Email: {self.email} Password: {self.password}"
+
+class Message(models.Model):
+    message     = models.CharField(max_length=255, null=True)
+    user        = models.ForeignKey(User, related_name="messages", null=True)
+    created_at  = models.DateTimeField(auto_now_add=True)
+    updated_at  = models.DateTimeField(auto_now=True)
+    objects     = UserManager()
+
+    def __repr__(self):
+        return f" ID: {self.id}, Message: {self.message}"
+
+class Comment(models.Model):
+    comment     = models.CharField(max_length=255, null=True)
+    message     = models.ForeignKey(Message, related_name="comments")
+    user        = models.ForeignKey(User, related_name="comments")
+    created_at  = models.DateTimeField(auto_now_add=True)
+    updated_at  = models.DateTimeField(auto_now=True)
+    objects     = UserManager()
+
+    def __repr__(self):
+        return f" ID: {self.id}, Comment: {self.comment}"
+
+
 

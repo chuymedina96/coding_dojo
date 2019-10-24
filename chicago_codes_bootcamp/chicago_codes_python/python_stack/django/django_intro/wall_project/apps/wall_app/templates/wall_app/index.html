@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <title>The Wall</title>
+  <style>
+    * {
+      font-family: 'Montserrat', sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="m-3 p-3 border rounded shadow bg-light">
+      <h1>THE WALL</h1>
+      <p class="h4 text-uppercase">Welcome, {{ user.username }} (<a href="/wall/logout">LOG OUT)</a></p>
+
+      {% if messages %}
+      {% for message in messages %}
+      {% if "message" in message.extra_tags %}
+      <div class="alert alert-danger" role="alert">
+        {{message}}
+      </div>
+      {% endif %}
+      {% endfor %}
+      {% endif %}
+
+      {% if messages %}
+      {% for message in messages %}
+      {% if "comment" in message.extra_tags %}
+      <div class="alert alert-danger" role="alert">
+        {{message}}
+      </div>
+      {% endif %}
+      {% endfor %}
+      {% endif %}
+
+      <hr>
+      <form action="/wall/process_message" method="post">
+        {% csrf_token %}
+        <label for="message" class="h2">POST A MESSAGE:</label>
+
+        <textarea name="message" rows="5" class="form-control mb-3"></textarea>
+        <div class="text-right">
+          <button type="submit" class="btn btn-primary">POST MESSAGE</button>
+        </div>
+      </form>
+
+      <h2 class="h2">MESSAGES:</h2>
+
+      {% for message in all_messages reversed %}
+      <div class="card mb-3 shadow-sm">
+        <div class="h3 card-header text-uppercase">{{ message.user.username }}, {{ message.created_at }}
+
+          {% if message.user.id == user.id %}
+          (<a href="/wall/messages/{{ message.id }}/delete" class="text-danger">DELETE</a>)
+          {% endif %}
+
+        </div>
+        <div class="card-body">
+          <p class="card-text">{{ message.text }}</p>
+          {% if message.comments.all|length > 0 %}
+          <h5>COMMENTS:</h5>
+          {% for comment in message.comments.all %}
+          <ul class="list-group small">
+            <li class="list-group-item mb-3 bg-light">
+              <span class="font-weight-bold">{{ comment.user.username }}: </span>
+              {{ comment.text }}
+              {% if comment.user.id == user.id %}
+              (<a href="/wall/comments/{{ comment.id }}/delete" class="text-danger">DELETE</a>)
+              {% endif %}<br>
+              LIKES: {{ message.comments.all|length }} |
+
+              {% if user in comment.likes.all %}
+              <a href="/wall/comments/{{comment.id}}/unlike" class="text-secondary">UNLIKE</a>
+              {% else %}
+              <a href="/wall/comments/{{comment.id}}/like" class="text-success">LIKE</a>
+              {% endif %}
+
+            </li>
+          </ul>
+          {% endfor %}
+          {% endif %}
+
+          <form action="/wall/process_comment" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="message_id" value="{{ message.id }}">
+            <label for="comment" class="h5">POST A COMMENT:</label>
+
+            <textarea name="comment" rows="2" class="form-control mb-3"></textarea>
+            <div class="text-right">
+              <button type="submit" class="btn btn-primary">POST COMMENT</button>
+            </div>
+          </form>
+
+        </div>
+        <div class="card-footer">
+          <span class="text-dark">LIKES: {{ message.likes.all|length }} |</span>
+          {% if user in message.likes.all %}
+          <a href="/wall/messages/{{message.id}}/unlike" class="text-secondary">UNLIKE</a>
+          {% else %}
+          <a href="#" class="text-success" id="like_button" data-message_id="{{message.id}}">LIKE</a>
+          {% endif %}
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $('#like_button').click(function () {
+      var message_id;
+      message_id = $(this).attr("data-message_id");
+      $.ajax(
+        {
+          type: "GET",
+          url: `/wall/messages/${message_id}/like`
+        })
+    });
+  </script>
+</body>
+
+</html>
