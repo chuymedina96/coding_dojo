@@ -33,7 +33,7 @@
             </ul>
             <form>
                 <div class="form-row align-items-center">
-                <div class="col-auto">
+                {% comment %} <div class="col-auto">
                         <label class="sr-only" for="inlineFormInput">Name</label>
                         <div class="input-group mb-2 login-form-resp">
                             <div class="input-group-prepend">
@@ -53,9 +53,9 @@
                         Remember me
                         </label>
                     </div>
-                    </div>
+                    </div> {% endcomment %}
                     <div class="col-auto">
-                    <button type="submit" class="btn btn-primary mb-2">Log in</button>
+                    <button type="submit" class="btn btn-danger mb-2">Log in with google</button>
                     </div>
                 </div>
             </form>
@@ -97,11 +97,11 @@
                 <div class="content">
                     <header class="sign-up-borders">
                         <h1 class="register-h2">Sign up now ...</h1>
-                        <h5 class="register-h5">Fill in info below to have an account</h5>
+                        <h5 class="register-h5">You must have a google account to sign up!</h5>
                     </header>
 
                     <form action="/register" method="POST">
-                        {% csrf_token %}    
+                        {% comment %} {% csrf_token %}    
                         {% if request.session.firstName %}
                             <input class="form-control" type="text" name="firstName" value="{{request.session.firstName}}"><br>
                         {% else %}
@@ -119,7 +119,7 @@
                         <input class="form-control" type="password" name="password" placeholder="Password"><br>
                         <input class="form-control" type="password" name="confirm" placeholder="Confirm Password"><br>
                         
-                        <button type="submit" class="btn btn-primary btn-lg btn-block">sign up</button>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">sign up</button> {% endcomment %}
                         <button type="submit" class="btn btn-danger btn-lg btn-block">sign up with google</button>
 
                     </form>
