@@ -1,0 +1,11 @@
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/overview_installation/FirstCSharp/bin/Debug/netcoreapp2.2/FirstCSharp.deps.json
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/overview_installation/FirstCSharp/bin/Debug/netcoreapp2.2/FirstCSharp.runtimeconfig.json
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/overview_installation/FirstCSharp/bin/Debug/netcoreapp2.2/FirstCSharp.runtimeconfig.dev.json
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/overview_installation/FirstCSharp/bin/Debug/netcoreapp2.2/FirstCSharp.dll
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/overview_installation/FirstCSharp/bin/Debug/netcoreapp2.2/FirstCSharp.pdb
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/overview_installation/FirstCSharp/obj/Debug/netcoreapp2.2/FirstCSharp.csprojAssemblyReference.cache
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/overview_installation/FirstCSharp/obj/Debug/netcoreapp2.2/FirstCSharp.csproj.CoreCompileInputs.cache
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/overview_installation/FirstCSharp/obj/Debug/netcoreapp2.2/FirstCSharp.AssemblyInfoInputs.cache
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/overview_installation/FirstCSharp/obj/Debug/netcoreapp2.2/FirstCSharp.AssemblyInfo.cs
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/overview_installation/FirstCSharp/obj/Debug/netcoreapp2.2/FirstCSharp.dll
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/overview_installation/FirstCSharp/obj/Debug/netcoreapp2.2/FirstCSharp.pdb

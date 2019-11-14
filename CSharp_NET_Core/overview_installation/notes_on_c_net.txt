@@ -1,0 +1,4 @@
+mkdir FirstCSharp
+cd FirstCSharp
+dotnet new console
+dotnet run

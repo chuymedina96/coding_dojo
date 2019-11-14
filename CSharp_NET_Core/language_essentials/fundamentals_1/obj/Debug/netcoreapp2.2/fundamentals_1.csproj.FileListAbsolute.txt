@@ -1,0 +1,11 @@
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/language_essentials/fundamentals_1/bin/Debug/netcoreapp2.2/fundamentals_1.deps.json
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/language_essentials/fundamentals_1/bin/Debug/netcoreapp2.2/fundamentals_1.runtimeconfig.json
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/language_essentials/fundamentals_1/bin/Debug/netcoreapp2.2/fundamentals_1.runtimeconfig.dev.json
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/language_essentials/fundamentals_1/bin/Debug/netcoreapp2.2/fundamentals_1.dll
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/language_essentials/fundamentals_1/bin/Debug/netcoreapp2.2/fundamentals_1.pdb
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/language_essentials/fundamentals_1/obj/Debug/netcoreapp2.2/fundamentals_1.csprojAssemblyReference.cache
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/language_essentials/fundamentals_1/obj/Debug/netcoreapp2.2/fundamentals_1.csproj.CoreCompileInputs.cache
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/language_essentials/fundamentals_1/obj/Debug/netcoreapp2.2/fundamentals_1.AssemblyInfoInputs.cache
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/language_essentials/fundamentals_1/obj/Debug/netcoreapp2.2/fundamentals_1.AssemblyInfo.cs
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/language_essentials/fundamentals_1/obj/Debug/netcoreapp2.2/fundamentals_1.dll
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/language_essentials/fundamentals_1/obj/Debug/netcoreapp2.2/fundamentals_1.pdb

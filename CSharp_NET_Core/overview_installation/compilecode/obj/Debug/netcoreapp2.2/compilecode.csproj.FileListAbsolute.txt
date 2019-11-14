@@ -1,0 +1,11 @@
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/overview_installation/compilecode/bin/Debug/netcoreapp2.2/compilecode.deps.json
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/overview_installation/compilecode/bin/Debug/netcoreapp2.2/compilecode.runtimeconfig.json
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/overview_installation/compilecode/bin/Debug/netcoreapp2.2/compilecode.runtimeconfig.dev.json
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/overview_installation/compilecode/bin/Debug/netcoreapp2.2/compilecode.dll
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/overview_installation/compilecode/bin/Debug/netcoreapp2.2/compilecode.pdb
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/overview_installation/compilecode/obj/Debug/netcoreapp2.2/compilecode.csprojAssemblyReference.cache
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/overview_installation/compilecode/obj/Debug/netcoreapp2.2/compilecode.csproj.CoreCompileInputs.cache
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/overview_installation/compilecode/obj/Debug/netcoreapp2.2/compilecode.AssemblyInfoInputs.cache
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/overview_installation/compilecode/obj/Debug/netcoreapp2.2/compilecode.AssemblyInfo.cs
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/overview_installation/compilecode/obj/Debug/netcoreapp2.2/compilecode.dll
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/overview_installation/compilecode/obj/Debug/netcoreapp2.2/compilecode.pdb

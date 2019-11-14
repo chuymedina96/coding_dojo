@@ -1,0 +1,9 @@
+{% comment %} Check version of dotnet {% endcomment %}
+dotnet --version
+
+{% comment %} new dotnet template project. This command give you a list of command to run with that command {% endcomment %}
+dotnet new
+
+{% comment %} dotnet new console starts a new project {% endcomment %}
+dotnet new console
+
