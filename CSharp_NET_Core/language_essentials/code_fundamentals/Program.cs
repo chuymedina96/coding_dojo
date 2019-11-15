@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace FirstCSharp
 {
@@ -109,12 +110,89 @@ namespace FirstCSharp
                 // }
 
             // Generating Random Values in C#
-                Random rand = new Random();
-                for(int val = 0; val < 10; val++)
+                // Random rand = new Random();
+                // for(int val = 0; val < 10; val++)
+                // {
+                //     //Prints the next random value between 2 and 8
+                //     Console.WriteLine(rand.Next(1,100));
+                // }
+
+            // Arrays
+                // With all programming languages, we often need to combine related values into a collection under a single variable name. With C#, there are quite a few ways we can do this, but the first one we will go over is the array. Arrays in C# are similar to other languages we have worked with, such as JavaScript or Python, in that they are a numerically indexed collection of values. However, unlike these other languages, Arrays in C# must have an exact length that is specified when the array is created, and this length cannot be changed.
+
+                // Declaring an array of length 5, initialized by default to all zeroes
+                int[] numArray = new int[5];
+                    // Declaring an array with pre-populated values
+                    // For Arrays initialized this way, the length is determined by the size of the given data
+                int[] numArray2 = {1,2,3,4,6};
+                Console.WriteLine(numArray2);
+                    // The [ ] brackets denote the Array type, and preceding the brackets we place the type of the values that we will store. Just like all other variables we have created so far, an array in C# must have an associated data type that (like length) is immutable. Anything that is placed inside of the array during or after declaration must conform to this value type. It is possible to declare an array without initialization, but you must use the "new" operator once you do define the array's values.
+                    // int[] array3;
+                    // array3 = new int[] {1,3,5,7,9};
+                int[] arrayOfInts = {1, 2, 3, 4, 5};
+
+                Console.WriteLine(arrayOfInts[0]);    // The first number lives at index 0.
+                Console.WriteLine(arrayOfInts[1]);    // The second number lives at index 1.
+                Console.WriteLine(arrayOfInts[2]);    // The third number lives at index 2.
+                Console.WriteLine(arrayOfInts[3]);    // The fourth number lives at index 3.
+                Console.WriteLine(arrayOfInts[4]);    // The fifth and final number lives at index 4.
+
+                // We can redefine the value at a particular index as well (once the array has an initial set of values).
+                int[] arr = {1, 2, 3, 4};
+                Console.WriteLine($"The first number of the arr is {arr[0]}"); 
+                arr[0] = 8;
+                Console.WriteLine($"The first number of the arr is now {arr[0]}");
+                // The array has now changed!
+
+                // Iterating through an array
+
+                // It would be quite tedious to move through an array by accessing each index by value; imagine if our array had 1000+ values!! Luckily we can use our knowledge from the last chapter to access each array index with a loop. This process (looping through all array indices) is called iterating.
+
+                // string[] myCars = new string[] { "Mazda Miata", "Ford Model T", "Dodge Challenger", "Nissan 300zx"};
+                // // The 'Length' property tells us how many values are in the Array (4 in our example here). 
+                // // We can use this to determine where the loop ends: Length-1 is the index of the last value. 
+                // for (int idx = 0; idx < myCars.Length; idx++)
+                // {
+                //     Console.WriteLine($"I own a {myCars[idx]}");
+                // }
+
+                // This is good, but because looping through an entire array is a common enough occurrence, C# goes even further. The C# language includes another type of loop called a foreach, for exactly this type of operation. A foreach loop just needs a variable that holds each indexed value of the array temporarily and will loop through all of them from there.
+
+                string[] myCars = new string[] { "Mazda Miata", "Ford Model T", "Dodge Challenger", "Nissan 300zx"}; 
+
+                foreach (string car in myCars)
                 {
-                    //Prints the next random value between 2 and 8
-                    Console.WriteLine(rand.Next(1,100));
+                    // We no longer need the index, because variable 'car' already represents each indexed value
+                    Console.WriteLine($"I own a {car}");
                 }
+            // Generic Lists
+                // If we were looking for something more similar to what we call arrays in languages like JavaScript look no further than Generic Lists, or just simply Lists. Lists are an implementation of linked lists that act very much like the dynamically sizing arrays of these other languages. Once you create a list you are able to freely add and remove things as well as access values by index independent of a declared size. This is because lists, just like arrays in JavaScript, are actually just objects with indexed attributes that act as the values of an array. Lists still need a type associated with them, just as every other variable in C#. To get started with Lists, we just need to be sure to include the class of generics to our project page by adding the following line at the top:
+
+                // using System.Collections.Generic; // add this to top when using lists
+                //Initializing an empty list of Motorcycle Manufacturers
+                List<string> bikes = new List<string>();
+                //Use the Add function in a similar fashion to push
+                bikes.Add("Kawasaki");
+                bikes.Add("Triumph");
+                bikes.Add("BMW");
+                bikes.Add("Moto Guzzi");
+                bikes.Add("Harley Davidson");
+                bikes.Add("Suzuki");
+                //Accessing a generic list value is the same as you would an array
+                Console.WriteLine(bikes[2]); //Prints "BMW"
+                Console.WriteLine($"We currently know of {bikes.Count} motorcycle manufacturers.");
+
+            
+
+                
+
+
+
+
+
+
+
+
         }
     }
 }

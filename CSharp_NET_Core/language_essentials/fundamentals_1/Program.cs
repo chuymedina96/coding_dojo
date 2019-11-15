@@ -23,6 +23,7 @@ namespace fundamentals_1
                 if(i % 3 ==0 && i % 5 ==0){
                     Console.WriteLine($"Fizzbuzz: Both multiple of 3 and 5 {i}");
                 }
+                
             }
         }
     }
