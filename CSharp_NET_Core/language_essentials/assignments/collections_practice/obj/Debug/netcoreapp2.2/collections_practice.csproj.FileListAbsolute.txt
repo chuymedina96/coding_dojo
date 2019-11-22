@@ -1,0 +1,11 @@
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/language_essentials/assignments/collections_practice/bin/Debug/netcoreapp2.2/collections_practice.deps.json
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/language_essentials/assignments/collections_practice/bin/Debug/netcoreapp2.2/collections_practice.runtimeconfig.json
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/language_essentials/assignments/collections_practice/bin/Debug/netcoreapp2.2/collections_practice.runtimeconfig.dev.json
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/language_essentials/assignments/collections_practice/bin/Debug/netcoreapp2.2/collections_practice.dll
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/language_essentials/assignments/collections_practice/bin/Debug/netcoreapp2.2/collections_practice.pdb
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/language_essentials/assignments/collections_practice/obj/Debug/netcoreapp2.2/collections_practice.csprojAssemblyReference.cache
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/language_essentials/assignments/collections_practice/obj/Debug/netcoreapp2.2/collections_practice.csproj.CoreCompileInputs.cache
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/language_essentials/assignments/collections_practice/obj/Debug/netcoreapp2.2/collections_practice.AssemblyInfoInputs.cache
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/language_essentials/assignments/collections_practice/obj/Debug/netcoreapp2.2/collections_practice.AssemblyInfo.cs
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/language_essentials/assignments/collections_practice/obj/Debug/netcoreapp2.2/collections_practice.dll
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/language_essentials/assignments/collections_practice/obj/Debug/netcoreapp2.2/collections_practice.pdb
