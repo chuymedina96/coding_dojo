@@ -15,19 +15,21 @@ namespace collections_practice
 
                 int[] myArray = {0,1,2,3,4,5,6,7,8,9};
 
-                foreach (int num in myArray)
+                myArray = new int[] {1,2,3,4,5,6,7,8,9};
+
+                foreach(int num in myArray)
                 {
                     Console.WriteLine(num);
                 }
 
                 // Create an array of the names "Tim", "Martin", "Nikki", & "Sara"
 
-                string[] names = new string[] {"Tim", "Martin", "Nikki", "Sara"};
+                    string[] names = {"Tim", "Martin", "Nikki", "Sara"};
 
-                foreach (string name in names)
-                {
-                    Console.WriteLine(name);
-                }
+                    foreach(string name in names)
+                    {
+                        Console.WriteLine(name);
+                    }
 
                 // Create an array of length 10 that alternates between true and false values, starting with true
 
@@ -78,13 +80,7 @@ namespace collections_practice
                     foreach (var entry in myDict)
                     {
                         Console.WriteLine(entry.Key + " - " + entry.Value);
-                    }
-
-
-
-
-                    
-
+                    }3
         }
     }
 }

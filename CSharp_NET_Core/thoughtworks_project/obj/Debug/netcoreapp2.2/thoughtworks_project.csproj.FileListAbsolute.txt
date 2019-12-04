@@ -1,0 +1,11 @@
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/thoughtworks_project/bin/Debug/netcoreapp2.2/thoughtworks_project.deps.json
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/thoughtworks_project/bin/Debug/netcoreapp2.2/thoughtworks_project.runtimeconfig.json
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/thoughtworks_project/bin/Debug/netcoreapp2.2/thoughtworks_project.runtimeconfig.dev.json
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/thoughtworks_project/bin/Debug/netcoreapp2.2/thoughtworks_project.dll
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/thoughtworks_project/bin/Debug/netcoreapp2.2/thoughtworks_project.pdb
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/thoughtworks_project/obj/Debug/netcoreapp2.2/thoughtworks_project.csprojAssemblyReference.cache
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/thoughtworks_project/obj/Debug/netcoreapp2.2/thoughtworks_project.csproj.CoreCompileInputs.cache
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/thoughtworks_project/obj/Debug/netcoreapp2.2/thoughtworks_project.AssemblyInfoInputs.cache
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/thoughtworks_project/obj/Debug/netcoreapp2.2/thoughtworks_project.AssemblyInfo.cs
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/thoughtworks_project/obj/Debug/netcoreapp2.2/thoughtworks_project.dll
+/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/thoughtworks_project/obj/Debug/netcoreapp2.2/thoughtworks_project.pdb
