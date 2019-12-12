@@ -12,6 +12,7 @@ def register(request):
     errors = User.objects.basic_validator(request.POST)
 
     if len(errors) > 0:
+        
         request.session['firstName']    = request.POST['firstName']
         request.session['lastName']     = request.POST['lastName']
         request.session['email']        = request.POST['email']
