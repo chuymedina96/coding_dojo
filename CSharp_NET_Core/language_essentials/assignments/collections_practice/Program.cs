@@ -80,7 +80,7 @@ namespace collections_practice
                     foreach (var entry in myDict)
                     {
                         Console.WriteLine(entry.Key + " - " + entry.Value);
-                    }3
+                    }
         }
     }
 }

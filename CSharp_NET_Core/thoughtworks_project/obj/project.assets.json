@@ -686,23 +686,23 @@
     ]
   },
   "packageFolders": {
-    "/Users/neo/.nuget/packages/": {},
+    "/Users/chuy/.nuget/packages/": {},
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/thoughtworks_project/thoughtworks_project.csproj",
+      "projectUniqueName": "/Users/chuy/Documents/projects/coding_dojo/CSharp_NET_Core/thoughtworks_project/thoughtworks_project.csproj",
       "projectName": "thoughtworks_project",
-      "projectPath": "/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/thoughtworks_project/thoughtworks_project.csproj",
-      "packagesPath": "/Users/neo/.nuget/packages/",
-      "outputPath": "/Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/thoughtworks_project/obj/",
+      "projectPath": "/Users/chuy/Documents/projects/coding_dojo/CSharp_NET_Core/thoughtworks_project/thoughtworks_project.csproj",
+      "packagesPath": "/Users/chuy/.nuget/packages/",
+      "outputPath": "/Users/chuy/Documents/projects/coding_dojo/CSharp_NET_Core/thoughtworks_project/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/neo/.nuget/NuGet/NuGet.Config"
+        "/Users/chuy/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"

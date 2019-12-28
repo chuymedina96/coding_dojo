@@ -9,3 +9,9 @@
 /Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/language_essentials/code_fundamentals/bin/Debug/netcoreapp2.2/code_fundamentals.pdb
 /Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/language_essentials/code_fundamentals/obj/Debug/netcoreapp2.2/code_fundamentals.dll
 /Users/neo/Documents/projects/coding_dojo/CSharp_NET_Core/language_essentials/code_fundamentals/obj/Debug/netcoreapp2.2/code_fundamentals.pdb
+/Users/chuy/Documents/projects/coding_dojo/CSharp_NET_Core/language_essentials/code_fundamentals/obj/Debug/netcoreapp2.2/code_fundamentals.csprojAssemblyReference.cache
+/Users/chuy/Documents/projects/coding_dojo/CSharp_NET_Core/language_essentials/code_fundamentals/obj/Debug/netcoreapp2.2/code_fundamentals.csproj.CoreCompileInputs.cache
+/Users/chuy/Documents/projects/coding_dojo/CSharp_NET_Core/language_essentials/code_fundamentals/obj/Debug/netcoreapp2.2/code_fundamentals.AssemblyInfoInputs.cache
+/Users/chuy/Documents/projects/coding_dojo/CSharp_NET_Core/language_essentials/code_fundamentals/obj/Debug/netcoreapp2.2/code_fundamentals.AssemblyInfo.cs
+/Users/chuy/Documents/projects/coding_dojo/CSharp_NET_Core/language_essentials/code_fundamentals/obj/Debug/netcoreapp2.2/code_fundamentals.dll
+/Users/chuy/Documents/projects/coding_dojo/CSharp_NET_Core/language_essentials/code_fundamentals/obj/Debug/netcoreapp2.2/code_fundamentals.pdb
