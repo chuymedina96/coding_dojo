@@ -26,6 +26,7 @@ The easiest way to check to see if your relationship makes sense for your data i
 One to Many and Many to One Relationships
 Objectives:
 
+
     What is a one-to-many relationship?
     What are some examples of one-to-many relationships?
     What is the difference between a foreign key and a primary key ?
